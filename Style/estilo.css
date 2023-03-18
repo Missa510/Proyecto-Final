@@ -1,0 +1,153 @@
+body{
+    background-image: url('../Imagenes/ferre_fondo_prin.jpg');
+    background-repeat: repeat-y;
+    background-size: 100%;
+}
+
+header{
+    border-radius: 30px 30px 0 0;
+    width: 1400px;
+    height: 300px;
+    padding: 1em;
+    margin: 0 auto;
+    background-color: rgba(75, 62, 42, 0.801);
+}
+header #logo{
+    border-radius: 25px;
+    width: 270px;
+    height: 270px;
+    background-image: url('../Imagenes/Logo.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    float: left;
+}
+
+header #foto{
+    border-radius: 25px;
+    width: 1000px;
+    height: 270px;
+    background-image: url('../Imagenes/logo2.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    float: right;
+}
+
+nav{
+    width: 1400px;
+    height: 60px;
+    margin: 0 auto;
+}
+
+nav .navbar{
+    height: 100%;
+    width: 100%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+nav .navbar .container-fluid .nav-item .offcanvas{
+    width: 500px;
+    background-image: url('../Imagenes/fondo_mas_opciones.jpg');
+    background-size: 100%;
+    background-repeat: repeat-y;
+}
+nav .navbar .container-fluid .nav-item .offcanvas .offcanvas-header{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(0, 0, 0);
+    text-align: justify;
+    background-color: rgba(255, 255, 255, 0.733);
+}
+nav .navbar .container-fluid .nav-item .offcanvas .offcanvas-body{
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.733);
+}
+main{
+    background-color: rgba(105, 97, 24, 0.315);
+    width: 1400px;
+    height: 1900px;
+    padding: 1em;
+    margin: 0 auto;
+}
+
+main .prin{
+    border-radius: 15px;
+    padding: 1em;
+    background-image: url('../Imagenes/fondo_arti.jpg');
+    background-repeat: repeat-y;
+    background-size: 100%;
+    height: 99%;
+    width: 75%;
+    float: right;
+}
+main .aside_info{
+    text-align: justify;
+    border-radius: 15px;
+    padding: 1em;
+    background-color: rgba(65, 30, 6, 0.767);
+    height: 99%;
+    width: 24%;
+    float: left;
+}
+main .aside_info .accordion{
+    font: bold;
+}
+main .aside_info .accordion .accordion-item .accordion-header .accordion-button:hover{
+    text-decoration: underline;
+    font-style: italic;
+    color: rgb(183, 0, 255);
+    text-decoration-color: rgb(183, 0, 255);
+    background-color: rgb(204, 203, 203);
+}
+main .aside_info .accordion .accordion-item .accordion-header .accordion-button:active{
+    text-decoration: none;
+    font-style: normal;
+    background-color: rgb(255, 255, 255);
+}
+main .prin .card .row .card-body .card-title{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 35px;
+    text-align: center;
+} 
+main .prin .card .row .card-body .card-text{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 25px;
+    text-align: justify;
+}
+main .prin .carousel .carousel-inner .carousel-item p{
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+}
+main .prin .carousel .carousel-inner .carousel-item h5{
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+}
+main .prin .carousel .carousel-inner .carousel-caption{
+    border-radius: 10px;
+    background-color: rgba(26, 26, 26, 0.345);
+}
+main .prin .carousel .carousel-indicators button{
+    background-color: black;
+}
+main .prin h1{
+    font-style: italic;
+    text-align: center;
+    background-color: rgba(224, 224, 224, 0.425);
+}
+footer .navbar{
+    height: 60px;
+    width: 1400px;
+    border-radius: 0 0 15px 15px;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+footer .navbar a:hover{
+    font-style: italic;
+    color: rgb(95, 121, 236);
+    text-decoration: underline;
+    text-decoration-color: rgb(95, 121, 236);
+}
+footer .navbar a:active{
+    font-style: normal;
+    color: rgb(236, 95, 236);
+    text-decoration: underline;
+    text-decoration-color: rgb(236, 95, 236);
+}
