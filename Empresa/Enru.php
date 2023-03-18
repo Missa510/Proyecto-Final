@@ -1,7 +1,5 @@
 <?php
     // // Conection with the database
-    // $conexiones_base = mysqli_connect("localhost", "root", "", "usuario_proyecto");
-    // mysqli_set_charset($conexiones_base, "utf8");
     
     //Navegación desde cero
     if(isset($_GET["control"]) and isset($_GET["funcion"])){

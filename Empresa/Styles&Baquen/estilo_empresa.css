@@ -287,12 +287,13 @@ footer{
 @media(max-width: 750px){
     .titulazo{font-size: calc(100px - 76px);}
     .logo{width: calc(169px - 100px); height: calc(169px - 100px);}
+    nav{display: grid; width: 100%;}
     .santiago{height: 100px; float: left; margin-bottom: 0;}
     .sergio{height: 100px; float: left; margin-top: 0;}
     .name{font-size: 14px;}
     .desc{font-size: 6px;}
     #fecha{font-size: 12px;}
-    .linx{font-size: calc(16px - 8px);}
+    .linx{font-size: calc(16px - 8px); width: max-content;}
     .enviar{padding: 0.25em 4em; font-size: 12px;}
     .link-cardeta{font-size: 8px;}
     th, td{font-size: 6px;}

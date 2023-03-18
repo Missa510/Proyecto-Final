@@ -9,7 +9,6 @@
          * @return void
          */
         public function principal(){
-            $title = ' | Home';
             include("Vista/Contenido/Empresa_init.php");
         }
         /**
@@ -17,7 +16,6 @@
          * @return void
          */
         public function mision(){
-            $title = ' | Mision';
             include("Vista/Contenido/Empresa_mision.php");
         }
         /**
@@ -25,7 +23,6 @@
          * @return void
          */
         public function vision(){
-            $title = ' | Vision';
             include("Vista/Contenido/Empresa_vision.php");
         }
         /**
@@ -33,15 +30,17 @@
          * @return void
          */
         public function login(){
-            $title = ' | Login';
             include("Vista/Contenido/Empresa_login.php");
         }
         /**
          * Summary of cuentas
          * @return void
          */
+        public function registro(){
+            include("Vista/Contenido/Empresa_login_registro.php");
+        }
+        
         public function cuentas(){
-            $title = ' | Cuentas';
             include("Vista/Contenido/cuentas.php");
         }
     };
