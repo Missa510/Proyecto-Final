@@ -21,6 +21,10 @@
             case 'navegacion':
                 $control = new Paginas();
                 break;
+
+            case 'login':
+                $control = new Paginas();
+                break;
         }
 
         $control->{$funcion}();

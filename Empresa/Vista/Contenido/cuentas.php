@@ -1,6 +1,4 @@
 <?php 
-    $conexiones_base = mysqli_connect("localhost", "root", "", "usuario_proyecto");
-    mysqli_set_charset($conexiones_base, "utf8");
     $consul_admin = "SELECT * FROM Administradores"; 
     $consul_mod = "SELECT * FROM Moderadores"; 
     $consul_usu = "SELECT * FROM Usuario_Corriente"; 
