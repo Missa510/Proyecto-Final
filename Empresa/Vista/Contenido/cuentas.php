@@ -1,7 +1,6 @@
-<?php 
-    $consul_admin = "SELECT * FROM Administradores"; 
-    $consul_mod = "SELECT * FROM Moderadores"; 
-    $consul_usu = "SELECT * FROM Usuario_Corriente"; 
+<?php
+    include("Conexion/conexion_base.php");
+    include("Controlador/control_tablas.php");
     include("Vista/Componentes/hd.php"); 
     include("Vista/Componentes/nav.php"); 
 ?>
@@ -13,7 +12,10 @@
                 Si tiene algún incoveniente con el registro de su cuenta, por favor comuníquese con nosotros. 
                 <strong>Es importante que no de a conocer su contraseña antes, durante y después del proceso de login
                 a ninguna entidad que no sea perteneciente a la empresa.</strong>
-                <a href="mailto:sjqv05@gmail.com" target="_blank" class="link-cardeta">Correo de Santiago Quintero</a>
+                <a href="mailto:sjqv05@gmail.com" target="_blank" class="link-cardeta">Correo de Santiago Quintero</a> o
+                también <a href="mailto:ssandovalrobles207@gmail.com" target="_blank" class="link-cardeta">Correo de Sergio 
+                Sandoval</a>
+                
             </p>
             <h1 class="display-4">Texto lorem</h1>
             <p class="fs-5">

@@ -1,7 +1,8 @@
 body{
-    background: linear-gradient(100deg, rgb(102, 102, 102), rgb(255, 255, 255));
-    background-size: cover;
+    background: linear-gradient(10deg, rgb(136, 136, 136), rgb(222, 222, 222));
+    background-size: 100% 100%;
     background-position: center;
+    background-repeat: no-repeat;
     max-width: 100%;
 }
 header{
@@ -17,6 +18,7 @@ header{
     justify-content: center;
 }
 .cosa{
+    margin-top: 1em;
     transition: all 0.4s ease;
     border-radius: 6px;
     display: flex;
@@ -44,7 +46,10 @@ nav{
     align-items: center;
     justify-content: center;
     align-content: center;
-    background-color: rgb(23, 23, 23);
+    position: sticky;
+    top: 0;
+    z-index: 6;
+    background-color: rgb(20, 20, 20);
     padding: 0.2em;
     max-height: 100px;
     width: 100%;
@@ -267,10 +272,7 @@ footer{
 }
 @media(max-width: 1580px) {
     .titulazo{font-size: calc(100px - 46px);}
-    .logo{
-        width: calc(169px - 70px);
-        height: calc(169px - 70px);
-    }
+    .logo{width: calc(169px - 70px); height: calc(169px - 70px);}
     .linx{font-size: calc(16px - 3px);}
     .santiago, .sergio{width: 49%;}
     .devep{display: flex; align-items: center; justify-content: space-between;}
@@ -281,19 +283,18 @@ footer{
     .contactos{width: 100%;}
     th, td{font-size: 14px;}
     svg{width: 12px; height: 12px;}
-    article{width: 100%; float: top;}
-    aside{float: bottom; width: 100%;}
+    article, aside{width: 100%;}
 }
 @media(max-width: 750px){
     .titulazo{font-size: calc(100px - 76px);}
     .logo{width: calc(169px - 100px); height: calc(169px - 100px);}
-    nav{display: grid; width: 100%;}
+    nav{display: flexbox;}
     .santiago{height: 100px; float: left; margin-bottom: 0;}
     .sergio{height: 100px; float: left; margin-top: 0;}
     .name{font-size: 14px;}
     .desc{font-size: 6px;}
     #fecha{font-size: 12px;}
-    .linx{font-size: calc(16px - 8px); width: max-content;}
+    .linx{font-size: calc(16px - 8px);}
     .enviar{padding: 0.25em 4em; font-size: 12px;}
     .link-cardeta{font-size: 8px;}
     th, td{font-size: 6px;}

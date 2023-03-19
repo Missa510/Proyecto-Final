@@ -1,6 +1,6 @@
 <aside>
     <div class="owners">
-        <h2 class="fs-4 text-center">Developers<span class="text-muted">/Desarrolladores</span></h2>
+        <h2 class="fs-4 text-center">Developers<span class="text-light">/Desarrolladores</span></h2>
         <div class="devep">
             <div class="santiago">
                 <a href="../Desarrollador/Santiago/" target="_blank" class="name">Santiago Quintero</a>
@@ -27,7 +27,10 @@
                     </div>
                     <div class="input-group mb-2">
                         <span class="input-group-text bg-dark text-light" id="basic-addon1">->@ Para:</span>
-                        <input type="email" class="form-control" name=":154" readonly value="sjqv05@gmail.com">
+                        <select class="form-select" name=":154" aria-label="Default select example">
+                            <option value="sjqv05@gmail.com">Correo de Santigo (sjqv05@gmail.com)</option>
+                            <option value="ssandovalrobles207@gmail.com">Correo de Sergio (ssandovalrobles207@gmail.com)</option>
+                        </select>
                     </div>
                     <div class="input-group mb-2">
                         <span class="input-group-text bg-dark text-light" id="basic-addon1">$ Asunto:</span>

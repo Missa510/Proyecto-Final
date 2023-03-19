@@ -16,7 +16,7 @@
                 correos admitidos de la empresa cuyos dueños se encargarán de resolver y solventar
                 sus inquietudes &heartsuit;</strong>
             </p>
-            <form action="?nave=regis" method="post">
+            <form action="#" method="post">
                 <h1 class="display-6 text-center">Datos personales</h1>
                 <div class="row g-2">
                     <div class="form-floating mb-3 col-6">

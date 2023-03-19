@@ -17,7 +17,7 @@
                 sus inquietudes &heartsuit;</strong><br>
                 ¿Aún no tienes una cuenta? <a href="?control=navegacion&&funcion=registro" class="link-dark">Regístrate</a>
             </p>
-            <form action="?control=login&&funcion=logear" method="post">
+            <form action="#" method="post">
                 <div class="row g-2">
                     <div class="form-floating mb-3 col-6">
                         <input type="text" name="sus" class="form-control" 
