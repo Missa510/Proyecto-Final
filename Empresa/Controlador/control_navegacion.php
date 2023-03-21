@@ -33,13 +33,17 @@
             include("Vista/Contenido/Empresa_login.php");
         }
         /**
-         * Summary of cuentas
+         * Summary of registro
          * @return void
          */
         public function registro(){
             include("Vista/Contenido/Empresa_login_registro.php");
         }
         
+        /**
+         * Summary of cuentas
+         * @return void
+         */
         public function cuentas(){
             include("Vista/Contenido/cuentas.php");
         }

@@ -15,9 +15,16 @@
                 alguna inquietud al momento de su sesión, por favor contactenos directamente a los
                 correos admitidos de la empresa cuyos dueños se encargarán de resolver y solventar
                 sus inquietudes &heartsuit;</strong><br>
-                ¿Aún no tienes una cuenta? <a href="?control=navegacion&&funcion=registro" class="link-dark">Regístrate</a>
+                <!-- ¿Aún no tienes una cuenta? <a href="?control=navegacion&&funcion=registro" class="link-dark">Regístrate</a> -->
             </p>
-            <form action="#" method="post">
+            <h1 class="display-5">Texto lorem</h1>
+            <p class="fs-5 text-justify">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis 
+                omnis magnam excepturi quod assumenda consequuntur obcaecati? Nulla 
+                necessitatibus inventore nisi cupiditate deleniti, iste est in suscipit non autem 
+                quas modi.
+            </p>
+            <form action="?control=login&&funcion=logear" method="post">
                 <div class="row g-2">
                     <div class="form-floating mb-3 col-6">
                         <input type="text" name="sus" class="form-control" 
@@ -53,9 +60,9 @@
                 <center><input type="submit" class="enviar" value="Sign up"></center>
                 <hr>
                 <div class="piedelogin">
-                    <a href="?nave=help_usu" class="link-cardeta">¿Olvidaste el usuario?</a>
-                    <a href="?nave=help_pass" class="link-cardeta">¿Olvidaste la contraseña?</a>
-                    <a href="?nave=help_tipo" class="link-cardeta">¿Olvidaste el tipo de usuario?</a>
+                    <a href="?control=navegacion&&funcion=cuentas" class="link-cardeta">¿Olvidaste el usuario?</a>
+                    <a href="?control=navegacion&&funcion=cuentas" class="link-cardeta">¿Olvidaste la contraseña?</a>
+                    <a href="?control=navegacion&&funcion=cuentas" class="link-cardeta">¿Olvidaste el tipo de usuario?</a>
                 </div>
             </form>
         </div>

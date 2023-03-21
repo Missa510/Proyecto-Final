@@ -23,7 +23,7 @@
                 break;
 
             case 'login':
-                $control = new Paginas();
+                $control = new Login();
                 break;
         }
 
