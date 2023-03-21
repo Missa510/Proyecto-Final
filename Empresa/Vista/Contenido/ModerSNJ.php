@@ -23,6 +23,15 @@
             available space and show how a longer snippet of text affects the surrounding content. We'll repeat it 
             often to keep the demonstration flowing, so be on the lookout for this exact same string of text.
         </p>
+        <h1 class="display-2 text-center">Profile</h1>
+        <div class="profile">
+            <img src="Imagenes_generales/user.png" class="logo-user">
+            <div class="user">
+                <p class="fs-3">Usuario: <?php echo "<strong>".$name."</strong>"; ?></p>
+                <p class="fs-3">Contraseña: <?php echo "<strong>".$pass."</strong>"; ?></p>
+                <p class="fs-3">Tipo de nivel: <?php echo "<strong>".$tipo."</strong>" ?></p>
+            </div>
+        </div>
     </div>
 </main>
 <?php include("Vista/Componentes/foot.php"); ?>
