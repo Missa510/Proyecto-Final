@@ -1,6 +1,4 @@
 <?php
-    include("Conexion/conexion_base.php");
-    include("Controlador/control_tablas.php");
     include("Vista/Componentes/hd.php"); 
     include("Vista/Componentes/nav.php"); 
 ?>

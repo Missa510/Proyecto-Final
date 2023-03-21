@@ -1,24 +1,27 @@
 <?php
     session_start();
+    require_once("Conexion/conexion_base.php");
 
     // require_once("Modelo/log_admin.php");
     // require_once("Modelo/log_moders.php");
     // require_once("Modelo/log_users.php");
 
     class Login{
-        function conex(){require_once("Conexion/conexion_base.php");}
+        // function conex(){require_once("Conexion/conexion_base.php");}
         public function logear(){
 
             $name = $_POST['sus'];
             $pass = $_POST['pass'];
             $tipo = $_POST['tipo'];
 
+            $base = new BaseDeDatos();
+            $conex_var = $base->conex();
+
             /* Administradores */
             if($tipo == "Administrador"){
-                require_once("Conexion/conexion_base.php");
 
                 $veri = "SELECT * FROM administradores WHERE nom_admin = '{$name}' AND pass_admin = '{$pass}' AND tipo_admin = '{$tipo}'";
-                $resul = mysqli_query($conexiones_base, $veri);   
+                $resul = mysqli_query($conex_var, $veri);   
         
                 $rows = mysqli_num_rows($resul); // Pasar por cada fila
 
@@ -36,7 +39,7 @@
                 require_once("Conexion/conexion_base.php");
 
                 $veri = "SELECT * FROM moderadores WHERE nom_admin = '{$name}' AND pass_admin = '{$pass}' AND tipo_admin = '{$tipo}'";
-                $resul = mysqli_query($conexiones_base, $veri);   
+                $resul = mysqli_query($conex_var, $veri);   
         
                 $rows = mysqli_num_rows($resul); // Pasar por cada fila
 
@@ -54,7 +57,7 @@
                 require_once("Conexion/conexion_base.php");
 
                 $veri = "SELECT * FROM usuario_corriente WHERE nom_admin = '{$name}' AND pass_admin = '{$pass}' AND tipo_admin = '{$tipo}'";
-                $resul = mysqli_query($conexiones_base, $veri);   
+                $resul = mysqli_query($conex_var, $veri);   
         
                 $rows = mysqli_num_rows($resul); // Pasar por cada fila
 

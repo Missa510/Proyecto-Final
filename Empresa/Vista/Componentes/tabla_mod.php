@@ -1,3 +1,4 @@
+<?php require_once("Controlador/control_admin.php"); ?>
 <div class="tab">
     <h1 class="display-6 text-center">Moderadores</h1>
     <table class="table table-dark table-hover">
@@ -8,8 +9,7 @@
             <th scope="col">Tipo</th>
         </thead>
         <?php 
-            $resuls_mod = mysqli_query($conexiones_base, $consul_mod); //Para la tabla
-            while($row = mysqli_fetch_assoc($resuls_mod)){
+            while($row = mysqli_fetch_assoc($mostrar_var)){
         ?>
         <tbody>
             <tr>
@@ -19,6 +19,6 @@
                 <td> <?php echo $row["tipo_mod"]; ?> </td>
             </tr>
         </tbody>
-        <?php } mysqli_free_result($resuls_mod);?>
+        <?php } mysqli_free_result($mostrar_var);?>
     </table>
 </div>
