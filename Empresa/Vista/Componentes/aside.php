@@ -8,7 +8,7 @@
             </div>
             <div class="space"></div>
             <div class="sergio">
-                <a href="../Desarrollador/Sergio/" target="_blank" class="name">Sergio Sandovál</a>
+                <a href="../Desarrollador/Sergio/" target="_blank" class="name">Sergio Sandoval</a>
                 <p class="desc">Jóven de 16 años proveniente de Colombia</p>
             </div>
         </div>
