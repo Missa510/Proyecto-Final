@@ -15,12 +15,6 @@
                 Sandoval</a>
                 
             </p>
-            <h1 class="display-4">Texto lorem</h1>
-            <p class="fs-5">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint facere voluptates vel tenetur 
-                eveniet officiis. Possimus debitis nulla, explicabo fugit iure aliquid, sequi, sit facere reiciendis 
-                excepturi eligendi impedit nesciunt.
-            </p>
             <h1 class="display-5 text-center">Usuarios admitidos (remover próximamente)</h1>
             <?php 
                 include("Vista/Componentes/tabla_admin.php");

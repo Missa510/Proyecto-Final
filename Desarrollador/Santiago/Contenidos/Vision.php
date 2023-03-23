@@ -26,13 +26,6 @@
       La visión que tiene Santiago es poder graduarse en la universidad para desarrollar aplicaciones web para
       los empresarios necesitados que están buscando crecer en el ámbito web ♥
       <br><br>
-      Texto Lorem en cada página: Lorem ipsum dolor sit amet consectetur 
-      adipisicing elit. Illum ducimus quasi quia aut animi tenetur natus ea, sit consectetur adipisci, officia 
-      eligendi aliquam? Iure culpa ullam excepturi error commodi laborum!
-      <br><br>
-      Tradución del texto del latín: La empresa en sí es una empresa muy exitosa. ¿Lo guiamos como si porque nació 
-      con esa mente, para que pueda obtener algunos de los deberes de elegir? ¡El derecho a culpar cualquier error 
-      de los beneficios del trabajo!
     </div>
 </div>
 <?php

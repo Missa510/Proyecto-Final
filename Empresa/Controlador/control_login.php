@@ -14,23 +14,23 @@
             $pass = $_POST['pass'];
             $tipo = $_POST['tipo'];
 
+            sleep(0.7);
+
             $base = new BaseDeDatos();
             $conex_var = $base->conex();
 
             /* Administradores */
             if($tipo == "Administrador"){
 
-                $veri = "SELECT * FROM administradores WHERE nom_admin = '{$name}' AND pass_admin = '{$pass}' AND tipo_admin = '{$tipo}'";
+                $veri = "SELECT * FROM Administradores WHERE nom_admin = '{$name}' AND pass_admin = '{$pass}' AND tipo_admin = '{$tipo}'";
                 $resul = mysqli_query($conex_var, $veri);   
         
                 $rows = mysqli_num_rows($resul); // Pasar por cada fila
 
-                sleep(2);
 
                 if($rows){include("Vista/Contenido/AdminSNJ.php");}
                 else{
                     include("Vista/Componentes/error_login.php");
-                    include("Vista/Contenido/Empresa_login.php");
                 }
             }
 
@@ -38,17 +38,15 @@
             elseif($tipo == "Moderador"){
                 require_once("Conexion/conexion_base.php");
 
-                $veri = "SELECT * FROM moderadores WHERE nom_admin = '{$name}' AND pass_admin = '{$pass}' AND tipo_admin = '{$tipo}'";
+                $veri = "SELECT * FROM Moderadores WHERE nom_mod = '{$name}' AND pass_mod = '{$pass}' AND tipo_mod = '{$tipo}'";
                 $resul = mysqli_query($conex_var, $veri);   
         
                 $rows = mysqli_num_rows($resul); // Pasar por cada fila
 
-                sleep(2);
 
                 if($rows){include("Vista/Contenido/ModerSNJ.php");}
                 else{
                     include("Vista/Componentes/error_login.php"); 
-                    include("Vista/Contenido/Empresa_login.php");
                 }
             }
 
@@ -56,19 +54,18 @@
             elseif($tipo == "Usuario Corriente"){
                 require_once("Conexion/conexion_base.php");
 
-                $veri = "SELECT * FROM usuario_corriente WHERE nom_admin = '{$name}' AND pass_admin = '{$pass}' AND tipo_admin = '{$tipo}'";
+                $veri = "SELECT * FROM Usuario_corriente WHERE nom_usu = '{$name}' AND pass_usu = '{$pass}' AND tipo_usu = '{$tipo}'";
                 $resul = mysqli_query($conex_var, $veri);   
         
                 $rows = mysqli_num_rows($resul); // Pasar por cada fila
 
-                sleep(2);
 
                 if($rows){include("Vista/Contenido/UsuNomSNJ.php");}
                 else{
                     include("Vista/Componentes/error_login.php");
-                    include("Vista/Contenido/Empresa_login.php");
                 }
             }
+            else{include("Vista/Componentes/error_login.php");}
             // echo '<p class = "fs-5">'.$veri.'</p>'; //ver si se insertó el código
         }
     };

@@ -20,7 +20,7 @@
             a su experiencia brindada por nosotros, por favor, llene el formulario de envio.
             <br><br>
             <div class="formasXD">
-                <form action="mailto:sjqv05@gmail.com" target="_blank">
+                <form action="mailto:" target="_blank">
                     <div class="input-group mb-2">
                         <span class="input-group-text bg-dark text-light" id="basic-addon1">@-> De:</span>
                         <input type="email" class="form-control" name="tx_mail" required>

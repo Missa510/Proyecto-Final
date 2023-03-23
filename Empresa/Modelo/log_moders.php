@@ -1,6 +1,6 @@
 <?php
     require_once("Conexion/conexion_base.php");
-    class Administradores{
+    class Moderadores{
 
         private $Id_mod, $nom_mod, $pass_mod, $tipo_mod;
 

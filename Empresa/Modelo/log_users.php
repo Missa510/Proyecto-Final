@@ -13,7 +13,7 @@
         public function Mostrar(){
             $base = new BaseDeDatos();
             $conex_var = $base->conex();
-            $resuls_users = mysqli_query($conex_var, "SELECT * FROM Usuario_Corriente");
+            $resuls_users = mysqli_query($conex_var, "SELECT * FROM Usuario_corriente");
             return $resuls_users;
         }
     };

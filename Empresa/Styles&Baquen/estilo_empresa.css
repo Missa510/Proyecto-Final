@@ -14,7 +14,7 @@ header{
     background-position-y: 0;
     background-repeat: no-repeat;
     height: max-content;
-    justify-items: center;
+    align-items: center;
     justify-content: center;
 }
 .cosa{
@@ -225,6 +225,19 @@ article{
     width: 550px;
     height: 250px;
 }
+.error-de-login{
+    background: linear-gradient(10deg, rgba(211, 50, 50, 0.511), rgba(107, 10, 10, 0.634));
+    padding: 0.3em;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.error-logo svg{
+    height: 100px;
+    width: 100px;
+    margin-right: 0.2em;
+}
 .mario{
     /* margin: 67px; */
     border-radius: 6px;
@@ -279,6 +292,7 @@ footer{
         width: calc(169px + 50px);
         height: calc(169px + 50px);
     }
+    .error-de-login{font-size: 14px;}
     .santiago, .sergio{width: 49%; height: 480px;}
     .devep{display: flex; align-items: center; justify-content: space-between;}
     .space{width: 0; height: 0; background-size: 0;}

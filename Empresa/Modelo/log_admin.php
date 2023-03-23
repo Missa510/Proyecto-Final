@@ -13,8 +13,8 @@
         public function Mostrar(){
             $base = new BaseDeDatos();
             $conex_var = $base->conex();
-            $resuls_moders = mysqli_query($conex_var, "SELECT * FROM Moderadores");
-            return $resuls_moders;
+            $resuls_admins = mysqli_query($conex_var, "SELECT * FROM Administradores");
+            return $resuls_admins;
         }
     };
 

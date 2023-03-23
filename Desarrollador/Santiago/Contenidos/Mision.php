@@ -27,14 +27,6 @@
       todas las exigencias de los clientes. La misión no es para nada facil, inclusive para Santiago debido
       a su pereza extrema, pero la perseverancia es un valor que nunca fue opción dejar atras. Todos los días
       Santiago esta mejorando para cumplir su misión, y su visión.
-      <br><br>
-      Texto Lorem en cada página: Lorem ipsum dolor sit amet consectetur 
-      adipisicing elit. Illum ducimus quasi quia aut animi tenetur natus ea, sit consectetur adipisci, officia 
-      eligendi aliquam? Iure culpa ullam excepturi error commodi laborum!
-      <br><br>
-      Tradución del texto del latín: La empresa en sí es una empresa muy exitosa. ¿Lo guiamos como si porque nació 
-      con esa mente, para que pueda obtener algunos de los deberes de elegir? ¡El derecho a culpar cualquier error 
-      de los beneficios del trabajo!
     </div>
 </div>
 <?php
