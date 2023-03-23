@@ -43,23 +43,7 @@ nav .navbar{
     width: 100%;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
-nav .navbar .container-fluid .nav-item .offcanvas{
-    width: 500px;
-    background-image: url('../Imagenes/fondo_mas_opciones.jpg');
-    background-size: 100%;
-    background-repeat: repeat-y;
-}
-nav .navbar .container-fluid .nav-item .offcanvas .offcanvas-header{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: rgb(0, 0, 0);
-    text-align: justify;
-    background-color: rgba(255, 255, 255, 0.733);
-}
-nav .navbar .container-fluid .nav-item .offcanvas .offcanvas-body{
-    font-family: Arial, Helvetica, sans-serif;
-    color: rgb(255, 255, 255);
-    background-color: rgba(0, 0, 0, 0.733);
-}
+
 main{
     background-color: rgba(105, 97, 24, 0.315);
     width: 1400px;
@@ -82,26 +66,18 @@ main .aside_info{
     text-align: justify;
     border-radius: 15px;
     padding: 1em;
-    background-color: rgba(65, 30, 6, 0.767);
+    background-color: white;
     height: 99%;
     width: 24%;
     float: left;
 }
-main .aside_info .accordion{
-    font: bold;
+
+.titulos{
+    text-align: center;
+    margin-top: 25px;
+    background-color: red;
 }
-main .aside_info .accordion .accordion-item .accordion-header .accordion-button:hover{
-    text-decoration: underline;
-    font-style: italic;
-    color: rgb(183, 0, 255);
-    text-decoration-color: rgb(183, 0, 255);
-    background-color: rgb(204, 203, 203);
-}
-main .aside_info .accordion .accordion-item .accordion-header .accordion-button:active{
-    text-decoration: none;
-    font-style: normal;
-    background-color: rgb(255, 255, 255);
-}
+
 main .prin .card .row .card-body .card-title{
     font-family: 'Times New Roman', Times, serif;
     font-size: 35px;
@@ -151,3 +127,47 @@ footer .navbar a:active{
     text-decoration: underline;
     text-decoration-color: rgb(236, 95, 236);
 }
+
+@media(max-width: 375px){
+  body{background-size: 1300px; width: max-content;}
+  header{width: 1270px;height: 300px;padding: 1em;margin: 0 auto;}  
+  header #logo{width: 250px;height: 250px;}
+  header #foto{width: calc(1270px - 300px);height: 250px;}
+  nav{width: 1270px;height: 125px;}
+  main{width: 1270px;height: 4600px;}
+  main .prin{height: 99%;width: 99%;}
+  main .aside_info{height: 24%;width: 99%;}
+  .titulos{font-size: 60px;}
+  .txt_info{font-size: 40px;}
+  main .prin .card .row .card-body .card-title{font-size: 50px;}
+  main .prin .card .row .card-body .card-text{font-size: 40px;}
+  main .prin .carousel .carousel-inner .carousel-item p{font-size: 40px;}
+  footer .navbar{height: 120px;width: 99%;}
+  .card .card-body ul li{font-size: 35px;}
+  .container-fluid{
+    justify-content: normal;
+  }
+  
+}
+
+@media(max-width: 1000px){
+    body{background-size: 1300px; width: max-content;}
+    header{width: 1270px;height: 300px;padding: 1em;margin: 0 auto;}  
+    header #logo{width: 250px;height: 250px;}
+    header #foto{width: calc(1270px - 300px);height: 250px;}
+    nav{width: 1270px;height: 125px;}
+    main{width: 1270px;height: 4600px;}
+    main .prin{height: 99%;width: 99%;}
+    main .aside_info{height: 24%;width: 99%;}
+    .titulos{font-size: 60px;}
+    .txt_info{font-size: 40px;}
+    main .prin .card .row .card-body .card-title{font-size: 50px;}
+    main .prin .card .row .card-body .card-text{font-size: 40px;}
+    main .prin .carousel .carousel-inner .carousel-item p{font-size: 40px;}
+    footer .navbar{height: 120px;width: 99%;}
+    .card .card-body ul li{font-size: 35px;}
+    .container-fluid{
+      justify-content: normal;
+    }
+    
+  }
