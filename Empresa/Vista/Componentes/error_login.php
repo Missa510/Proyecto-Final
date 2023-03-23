@@ -18,6 +18,14 @@
         No se pudo hallar el usuario <strong><?= $name; ?></strong>, de tipo de nivel <strong><?= $tipo; ?></strong> <br>
     </p>
     <h1 class="display-1 text-center">Tipo de error</h1>
+    <img src="Imagenes_generales/mess-error-image15.png" class="img-error" alt="Error">
+    <p class="fs-5">
+        Estos tipos de errores son muy comúnes cuando el usuario digitó un dato erroneo durante su proceso de Log In.
+        Para evitar esto se debe confirmar el empleo correcto de los datos digitados anteriormente 
+    </p>
+    <img src="Imagenes_generales/000-http-error-codes.png" class="img-error" alt="Error">
+    <br>
+    <br>
     <a type="button" href="?control=navegacion&&funcion=login" class="btn btn-dark">Volver al Log in (Back to Log in)</a>
 </main>
 <?php include("Vista/Componentes/foot.php") ?>

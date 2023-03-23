@@ -3,7 +3,6 @@
     include("Vista/Componentes/nav.php"); 
 ?>
 <main>
-    <?php include("Vista/Componentes/aside.php"); ?>    
     <article>
     <h1 class="display-1 text-center">Visión</h1>
         <p class="fs-5">
@@ -12,5 +11,6 @@
         </p>
         <img src="Imagenes_generales/vis.jpg" alt="visión image" class="vis">
     </article>
+    <?php include("Vista/Componentes/aside.php"); ?>
 </main>
 <?php include("Vista/Componentes/foot.php"); ?>

@@ -3,7 +3,6 @@
     include("Vista/Componentes/nav.php"); 
 ?>
 <main>
-    <?php include("Vista/Componentes/aside.php"); ?>
     <article>
         <h1 class="display-1 text-center">Home/<span class="text-light">Inicio</span></h1>
         <br>
@@ -31,5 +30,6 @@
         </p>
         <img class="banner img-fluid mx-auto d-block" src="Imagenes_generales/gif3.gif" alt="banner">
     </article>
+    <?php include("Vista/Componentes/aside.php"); ?>
 </main>
 <?php include("Vista/Componentes/foot.php"); ?>

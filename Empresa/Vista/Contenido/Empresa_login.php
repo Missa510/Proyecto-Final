@@ -14,8 +14,12 @@
                 sus datos de registro a entidades que no sean pertenecientes a la empresa. Si tiene
                 alguna inquietud al momento de su sesión, por favor contactenos directamente a los
                 correos admitidos de la empresa cuyos dueños se encargarán de resolver y solventar
-                sus inquietudes &heartsuit;</strong><br>
+                sus inquietudes &heartsuit;</strong><br><br>
                 <!-- ¿Aún no tienes una cuenta? <a href="?control=navegacion&&funcion=registro" class="link-dark">Regístrate</a> -->
+                Al utilizar nuestros servicios, nos confías tus datos. Entendemos que es una gran 
+                responsabilidad y nos esforzamos al máximo para proteger tu información y permitirte 
+                controlarla.<br><br>
+                
             </p>
             <form action="?control=login&&funcion=logear" method="post">
                 <div class="row g-2">

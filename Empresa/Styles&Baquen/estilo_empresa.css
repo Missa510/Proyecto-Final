@@ -266,6 +266,10 @@ article{
     justify-content: space-evenly;
     justify-items: center;
 }
+.img-error{
+    width: 100%;
+    border-radius: 5px;
+}
 .logo-user{
     height: 100%;
     border-radius: 50%;
