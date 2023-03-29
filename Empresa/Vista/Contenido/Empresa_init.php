@@ -4,7 +4,7 @@
 ?>
 <main>
     <article>
-        <h1 class="display-1 text-center">Home/<span class="text-light">Inicio</span></h1>
+        <h1 class="display-1 text-center" id="titulo">Home/<span class="text-light">Inicio</span></h1>
         <br>
         <p class="fs-5">
             S&J es una empresa que de desarrolladores fundada por <strong>Jeisson Díaz y Santiago Quintero</strong>

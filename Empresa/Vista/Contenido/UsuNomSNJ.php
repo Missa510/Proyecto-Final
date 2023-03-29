@@ -5,7 +5,7 @@
 <main>
     <div class="main-puro">
         <div id="fecha"></div>
-        <h1 class="display-1 text-center">Usuarios normales</h1>
+        <h1 class="display-1 text-center" id="titulo">Usuarios normales</h1>
         <p class="fs-5">
             Esta es una página de desarrolladores para la empresa S&J. Esta página aún está en desarrollo
             pero más adelnate estará en total funcionamiento.

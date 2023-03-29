@@ -5,7 +5,7 @@
 <main>
     <div class="main-puro">
         <div class="cardeta">
-            <h1 class="display-1 text-center">Registro</h1>
+            <h1 class="display-1 text-center" id="titulo">Registro</h1>
             <p class="fs-4 text-center">
                 Este es el registro para los usuarios de la empresa S&J. Bienvenido &heartsuit;
             </p>

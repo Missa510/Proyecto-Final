@@ -5,7 +5,7 @@
 <main>
     <div class="main-puro">
         <div id="fecha"></div>
-        <h1 class="display-1 text-center">Moderadores</h1>
+        <h1 class="display-1 text-center" id="titulo">Moderadores</h1>
         <div class="mario position-relative start-50"></div>
         <p class="fs-5">
             Esta es una página de desarrolladores para la empresa S&J. Esta página aún está en desarrollo

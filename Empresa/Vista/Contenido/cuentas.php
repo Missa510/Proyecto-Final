@@ -5,7 +5,7 @@
 <main>
     <div class="main-puro">
         <div class="container-fluid">
-            <h1 class="display-1 text-center">Control de cuentas</h1>
+            <h1 class="display-1 text-center" id="titulo">Control de cuentas</h1>
             <p class="fs-5">
                 Si tiene algún incoveniente con el registro de su cuenta, por favor comuníquese con nosotros. 
                 <strong>Es importante que no de a conocer su contraseña antes, durante y después del proceso de login

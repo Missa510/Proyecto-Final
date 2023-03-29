@@ -4,7 +4,7 @@
 ?>
 <main>
     <article>
-        <h1 class="display-1 text-center">Misión</h1>
+        <h1 class="display-1 text-center" id="titulo">Misión</h1>
         <p class="fs-5">
             La misión de la empresa es entregar un producto de calidad con todos los clientes
             para la satisfacción tanto del cliente como a nosotros ♥
