@@ -1,11 +1,17 @@
-body{
-    background: linear-gradient(10deg, rgb(136, 136, 136), rgb(222, 222, 222));
+body {
+    background: #abbaab;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ffffff, #abbaab);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ffffff, #abbaab);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
     max-width: 100%;
 }
-header{
+
+header {
     padding: 0.7em;
     display: grid;
     background-image: url('../Imagenes_generales/jeder.jpg');
@@ -17,31 +23,40 @@ header{
     align-items: center;
     justify-content: center;
 }
-.cosa{
+
+.cosa {
+    background: #403b4a9a;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #e7e9bb9d, #403b4ada);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #e7e9bb9d, #403b4ada);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     margin-top: 1em;
     transition: all 0.4s ease;
     border-radius: 6px;
     display: flex;
     width: max-content;
     max-width: 100%;
-    background-color: rgba(255, 255, 255, 0.527);
     contain: content;
     margin-bottom: 1em;
 }
-.logo{
+
+.logo {
     border-radius: 6px;
     width: 169px;
     height: 169px;
     margin-right: 0.7em;
 }
-.titulazo{
+
+.titulazo {
     font-family: 'consolas';
     font-size: 100px;
     justify-self: center;
     align-self: center;
     text-align: center;
 }
-nav{
+
+nav {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -54,7 +69,8 @@ nav{
     max-height: 100px;
     width: 100%;
 }
-.linx{
+
+.linx {
     padding: 0.6em;
     background: rgb(20, 20, 20);
     font-size: 16px;
@@ -65,31 +81,38 @@ nav{
     border-radius: 6px;
     contain: content;
 }
-svg{
+
+svg {
     align-self: center;
     width: 20px;
     height: 20px;
 }
-.alert svg{
+
+.alert svg {
     width: 19px;
     height: 19px;
     margin-right: 6px;
 }
-.linx:hover, .linx:focus{
+
+.linx:hover,
+.linx:focus {
     transition: all 0.4s ease;
     background: rgb(224, 224, 224);
     color: black;
 }
-.linx:active{
+
+.linx:active {
     background-color: rgb(78, 78, 78);
     font-weight: bolder;
 }
-main{
+
+main {
     width: 100%;
-    padding: 0.7em;
+    padding: 0.7em 4em 0.7em 4em;
     max-height: 3000px;
 }
-.main-puro{
+
+.main-puro {
     width: 100%;
     background: rgba(34, 37, 0, 0.329);
     border-radius: 6px;
@@ -97,8 +120,9 @@ main{
     text-align: justify;
     /* margin: 1em; */
 }
-aside{
-    background: rgba(34, 37, 0, 0.329);    
+
+aside {
+    background: rgba(34, 37, 0, 0.329);
     padding: 0.7em;
     float: right;
     border-radius: 6px;
@@ -108,23 +132,31 @@ aside{
     height: 100%;
     margin-bottom: 0.7em;
 }
-.owners, .devep{
+
+.owners,
+.devep {
     contain: content;
     align-items: center;
     justify-items: center;
     display: grid;
 }
-.contactos{text-align: justify;}
-.devep{
+
+.contactos {
+    text-align: justify;
+}
+
+.devep {
     width: 100%;
     height: max-content;
     display: grid;
 }
-.space{
+
+.space {
     width: 100%;
     height: 0.7em;
 }
-.santiago{
+
+.santiago {
     contain: content;
     align-self: center;
     color: white;
@@ -140,7 +172,8 @@ aside{
     height: 280px;
     width: 75%;
 }
-.sergio{
+
+.sergio {
     contain: content;
     color: white;
     text-align: center;
@@ -155,38 +188,48 @@ aside{
     height: 280px;
     width: 75%;
 }
-.formasXD{
+
+.formasXD {
     background-color: rgba(99, 59, 32, 0.356);
     padding: 0.35em;
     width: 100%;
     border-radius: 6px;
     text-align: center;
 }
-.login{
+
+.login {
     margin: 0.7em;
     padding: 0.7em;
     background: rgba(34, 37, 0, 0.329);
     border-radius: 6px;
 }
-.name{
-    float: center; 
+
+.name {
+    float: center;
     font-size: 28px;
     color: white;
     text-decoration: none;
     border-radius: 6px;
     padding: 3px;
 }
-.name:hover, .name:focus{
+
+.name:hover,
+.name:focus {
     transition: all 0.4s ease;
     background-color: white;
     color: black;
 }
-.name:active{
+
+.name:active {
     background-color: rgb(102, 102, 102);
 }
-.desc{float: center; font-size: 18px;}
 
-article{
+.desc {
+    float: center;
+    font-size: 18px;
+}
+
+article {
     text-align: justify;
     background: rgba(36, 39, 0, 0.329);
     padding: 1em;
@@ -197,7 +240,8 @@ article{
     height: 100%;
     margin-bottom: 0.7em;
 }
-.enviar{
+
+.enviar {
     border-radius: 6px;
     border: none;
     padding: 0.5em 8em;
@@ -205,27 +249,37 @@ article{
     background-color: rgb(29, 29, 29);
     color: white;
 }
-.piedelogin{
+
+.piedelogin {
     display: flex;
     justify-content: space-around;
 }
-.vis, .mis{border-radius: 6px;}
-.link-cardeta{
+
+.vis,
+.mis {
+    border-radius: 6px;
+}
+
+.link-cardeta {
     color: black;
     font-size: 20px;
 }
-.link-cardeta:hover, .link-cardeta:focus{
+
+.link-cardeta:hover,
+.link-cardeta:focus {
     color: rgb(43, 43, 43);
-    text-decoration: none; 
+    text-decoration: none;
     font-style: italic;
 }
-.banner{
+
+.banner {
     align-self: center;
     border-radius: 6px;
     width: 550px;
     height: 250px;
 }
-.error-de-login{
+
+.error-de-login {
     background: linear-gradient(10deg, rgba(211, 50, 50, 0.511), rgba(107, 10, 10, 0.634));
     padding: 0.3em;
     border-radius: 5px;
@@ -233,12 +287,13 @@ article{
     align-items: center;
 }
 
-.error-logo svg{
+.error-logo svg {
     height: 100px;
     width: 100px;
     margin-right: 0.2em;
 }
-.mario{
+
+.mario {
     /* margin: 67px; */
     border-radius: 6px;
     background-image: url("../Imagenes_generales/mario.png");
@@ -248,7 +303,8 @@ article{
     animation: sprites-mario 1s steps(10) infinite;
     /* transform: scale(5.5); */
 }
-#fecha{
+
+#fecha {
     text-align: center;
     font-weight: 200;
     font-size: 32px;
@@ -257,7 +313,8 @@ article{
     border-radius: 6px;
     padding: 0.25em;
 }
-.profile{
+
+.profile {
     background-color: rgba(0, 35, 35, 0.418);
     padding: 0.3em;
     display: flex;
@@ -266,15 +323,18 @@ article{
     justify-content: space-evenly;
     justify-items: center;
 }
-.img-error{
+
+.img-error {
     width: 100%;
     border-radius: 5px;
 }
-.logo-user{
+
+.logo-user {
     height: 100%;
     border-radius: 50%;
 }
-footer{
+
+footer {
     width: 100%;
     height: max-content;
     display: flex;
@@ -285,49 +345,175 @@ footer{
     background: black;
     color: white;
 }
+
 @keyframes sprites-mario {
-    0%{background-position-x: 0;}
-    100%{background-position-x: 389px;}
+    0% {
+        background-position-x: 0;
+    }
+
+    100% {
+        background-position-x: 389px;
+    }
 }
-@media(min-width: 3160px){
-    *{font-size: +36px;}
-    .linx{font-size: 24px;}
-    .logo{
+
+@media(min-width: 3160px) {
+    * {
+        font-size: +36px;
+    }
+
+    .linx {
+        font-size: 24px;
+    }
+
+    .logo {
         width: calc(169px + 50px);
         height: calc(169px + 50px);
     }
-    .error-de-login{font-size: 14px;}
-    .santiago, .sergio{width: 49%; height: 480px;}
-    .devep{display: flex; align-items: center; justify-content: space-between;}
-    .space{width: 0; height: 0; background-size: 0;}
+
+    .error-de-login {
+        font-size: 14px;
+    }
+
+    .santiago,
+    .sergio {
+        width: 49%;
+        height: 480px;
+    }
+
+    .devep {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .space {
+        width: 0;
+        height: 0;
+        background-size: 0;
+    }
 }
+
 @media(max-width: 1580px) {
-    .titulazo{font-size: calc(100px - 46px);}
-    .logo{width: calc(169px - 70px); height: calc(169px - 70px);}
-    .linx{font-size: calc(16px - 3px);}
-    .santiago, .sergio{width: 49%;}
-    .devep{display: flex; align-items: center; justify-content: space-between;}
-    .space{width: 0; height: 0; background-size: 0;}
-    .name{font-size: 21px;}
-    #fecha{font-size: 18px;}
-    .link-cardeta{font-size: 14px;}
-    .contactos{width: 100%;}
-    th, td{font-size: 14px;}
-    svg{width: 12px; height: 12px;}
-    article, aside{width: 100%;}
+    .titulazo {
+        font-size: calc(100px - 46px);
+    }
+
+    .logo {
+        width: calc(169px - 70px);
+        height: calc(169px - 70px);
+    }
+
+    .linx {
+        font-size: calc(16px - 3px);
+    }
+
+    .santiago,
+    .sergio {
+        width: 49%;
+    }
+
+    .devep {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .space {
+        width: 0;
+        height: 0;
+        background-size: 0;
+    }
+
+    .name {
+        font-size: 21px;
+    }
+
+    #fecha {
+        font-size: 18px;
+    }
+
+    .link-cardeta {
+        font-size: 14px;
+    }
+
+    .contactos {
+        width: 100%;
+    }
+
+    th,
+    td {
+        font-size: 14px;
+    }
+
+    svg {
+        width: 12px;
+        height: 12px;
+    }
+
+    article,
+    aside {
+        width: 100%;
+    }
 }
-@media(max-width: 750px){
-    .titulazo{font-size: calc(100px - 76px);}
-    .logo{width: calc(169px - 100px); height: calc(169px - 100px);}
-    nav{display: flexbox;}
-    .santiago{height: 100px; float: left; margin-bottom: 0;}
-    .sergio{height: 100px; float: left; margin-top: 0;}
-    .name{font-size: 14px;}
-    .desc{font-size: 6px;}
-    #fecha{font-size: 12px;}
-    .linx{font-size: calc(16px - 8px);}
-    .enviar{padding: 0.25em 4em; font-size: 12px;}
-    .link-cardeta{font-size: 8px;}
-    th, td{font-size: 6px;}
-    svg{width: 6px; height: 6px;}
+
+@media(max-width: 750px) {
+    .titulazo {
+        font-size: calc(100px - 76px);
+    }
+
+    .logo {
+        width: calc(169px - 100px);
+        height: calc(169px - 100px);
+    }
+
+    nav {
+        display: flexbox;
+    }
+
+    .santiago {
+        height: 100px;
+        float: left;
+        margin-bottom: 0;
+    }
+
+    .sergio {
+        height: 100px;
+        float: left;
+        margin-top: 0;
+    }
+
+    .name {
+        font-size: 14px;
+    }
+
+    .desc {
+        font-size: 6px;
+    }
+
+    #fecha {
+        font-size: 12px;
+    }
+
+    .linx {
+        font-size: calc(16px - 8px);
+    }
+
+    .enviar {
+        padding: 0.25em 4em;
+        font-size: 12px;
+    }
+
+    .link-cardeta {
+        font-size: 8px;
+    }
+
+    th,
+    td {
+        font-size: 6px;
+    }
+
+    svg {
+        width: 6px;
+        height: 6px;
+    }
 }

@@ -27,4 +27,13 @@ if(hora < 10){
 let formato = "Fecha y hora actual: " + 
 dia + ' de ' + meses[mes] + ' del ' + anyo + '; ' + hora + ':' + minutos + '\n';
 
-document.getElementById("fecha").innerHTML = formato;
+document.getElementById("fecha").innerText = formato;
+
+function ViewPassword(){
+    var tipo = document.getElementById("Password");
+    if(tipo.type == "password"){
+        tipo.type = "text";
+    }else{
+        tipo.type = "password";
+    }
+}
