@@ -32,7 +32,7 @@ if(!isset($_GET['opcion']))
             include("VISTA/PAGINA/contacto.php");
         }//FIN CONTACTO
 
-        //----------------------------------------- INICIO LLAMAR EMPRESA Y PAGINAS DE LA EMPRESA --------------------------------------//
+        //----------------------------------------- INICIO LLAMAR EMPRESA  --------------------------------------//
 
         if($_GET["opcion"]=='empresa')
         {
@@ -41,7 +41,7 @@ if(!isset($_GET['opcion']))
         }//FIN EMPRESA
 
         
-        //----------------------------------------- FIN LLAMAR EMPRESA Y PAGINAS DE LA EMPRESA --------------------------------------//
+        //----------------------------------------- FIN LLAMAR EMPRESA   --------------------------------------//
 
         //----------------------------------------- INICIO LLAMAR BLOG Y PAGINAS DEL BLOG --------------------------------------//     
 

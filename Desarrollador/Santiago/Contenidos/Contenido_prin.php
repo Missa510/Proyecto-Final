@@ -118,7 +118,7 @@
               <li>
                 <strong>Recomendaciones:</strong> El servicio sirve para páginas que solo usan
                 <a href="https://es.wikipedia.org/wiki/Desarrollo_web_Front-end" target="_blank" class="link-danger">Front-End</a>. Pero el sitio se verá muy bien
-                (garantizado)
+                (garantizado)<br><br><br><br>
               </li>
             </ul>
             <a role="button" class="w-100 btn btn-lg btn-outline-danger" href="mailto:sjqv05@gmail.com">
@@ -145,7 +145,7 @@
                 <a href="https://es.wikipedia.org/wiki/Desarrollo_web_Front-end" target="_blank" class="link-danger">Front-End</a> 
                 y 
                 <a href="https://es.wikipedia.org/wiki/Desarrollo_web_Back-end" target="_blank" class="link-danger">Back-End</a>.
-                Una excelente elección para usar en casos de empresarios digitales que iniciaron recientemente
+                Una excelente elección para usar en casos de empresarios digitales que iniciaron recientemente<br><br><br>
               </li>
             </ul>
             <a role="button" class="w-100 btn btn-lg btn-danger" href="mailto:sjqv05@gmail.com">

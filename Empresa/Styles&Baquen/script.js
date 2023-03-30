@@ -5,7 +5,7 @@ const nombre_empresa = document.getElementById("nombre_empresa").textContent
 //Funciones
 function ActualizarTitulo() {
     if(titulo == "Administradores" || titulo == "Mostradores" || titulo == "Usuarios normales"){Fecha()}
-    document.querySelector('title').innerText = nombre_empresa + " | " + titulo
+    document.querySelector('TITLE').innerText = nombre_empresa + " | " + titulo
 }
 
 function Fecha() {
