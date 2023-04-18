@@ -1,5 +1,7 @@
 CREATE DATABASE usuario_proyecto;
 
+USE usuario_proyecto;
+
 CREATE TABLE Administradores(
     id_admin INT AUTO_INCREMENT NOT NULL,
     mail_admin varchar(40) NOT NULL,

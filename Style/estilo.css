@@ -1,173 +1,47 @@
-body{
-    background-image: url('../Imagenes/ferre_fondo_prin.jpg');
-    background-repeat: repeat-y;
-    background-size: 100%;
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
 }
 
-header{
-    border-radius: 30px 30px 0 0;
-    width: 1400px;
-    height: 300px;
-    padding: 1em;
-    margin: 0 auto;
-    background-color: rgba(75, 62, 42, 0.801);
-}
-header #logo{
-    border-radius: 25px;
-    width: 270px;
-    height: 270px;
-    background-image: url('../Imagenes/Logo.jpg');
-    background-repeat: no-repeat;
-    background-size: 100%;
-    float: left;
+body {
+    background: #B79891;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #94716B, #B79891);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #94716B, #B79891);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
-header #foto{
-    border-radius: 25px;
-    width: 1000px;
-    height: 270px;
-    background-image: url('../Imagenes/logo2.jpg');
-    background-repeat: no-repeat;
-    background-size: 100%;
-    float: right;
+header {
+    font-family: 'Comfortaa', cursive;
+    contain: content;
+    display: flex;
+    padding: 10em;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.82);
 }
 
-nav{
-    width: 1400px;
-    height: 60px;
-    margin: 0 auto;
-}
-
-nav .navbar{
-    height: 100%;
-    width: 100%;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-
-main{
-    background-color: rgba(105, 97, 24, 0.315);
-    width: 1400px;
-    height: 1900px;
-    padding: 1em;
-    margin: 0 auto;
-}
-
-main .prin{
-    border-radius: 15px;
-    padding: 1em;
-    background-image: url('../Imagenes/fondo_arti.jpg');
-    background-repeat: repeat-y;
-    background-size: 100%;
-    height: 99%;
-    width: 75%;
-    float: right;
-}
-main .aside_info{
-    text-align: justify;
-    border-radius: 15px;
-    padding: 1em;
-    background-color: white;
-    height: 99%;
-    width: 24%;
-    float: left;
-}
-
-.titulos{
-    text-align: center;
-    margin-top: 25px;
-    background-color: red;
-}
-
-main .prin .card .row .card-body .card-title{
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 35px;
-    text-align: center;
-} 
-main .prin .card .row .card-body .card-text{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 25px;
-    text-align: justify;
-}
-main .prin .carousel .carousel-inner .carousel-item p{
-    font-size: 20px;
-    color: rgb(255, 255, 255);
-}
-main .prin .carousel .carousel-inner .carousel-item h5{
-    font-size: 30px;
-    color: rgb(255, 255, 255);
-}
-main .prin .carousel .carousel-inner .carousel-caption{
+.Logo {
+    margin-right: 45px;
+    height: 450px;
+    width: 450px;
     border-radius: 10px;
-    background-color: rgba(26, 26, 26, 0.345);
-}
-main .prin .carousel .carousel-indicators button{
-    background-color: black;
-}
-main .prin h1{
-    font-style: italic;
-    text-align: center;
-    background-color: rgba(224, 224, 224, 0.425);
-}
-footer .navbar{
-    height: 60px;
-    width: 1400px;
-    border-radius: 0 0 15px 15px;
-    text-align: center;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-footer .navbar a:hover{
-    font-style: italic;
-    color: rgb(95, 121, 236);
-    text-decoration: underline;
-    text-decoration-color: rgb(95, 121, 236);
-}
-footer .navbar a:active{
-    font-style: normal;
-    color: rgb(236, 95, 236);
-    text-decoration: underline;
-    text-decoration-color: rgb(236, 95, 236);
 }
 
-@media(max-width: 375px){
-  body{background-size: 1300px; width: max-content;}
-  header{width: 1270px;height: 300px;padding: 1em;margin: 0 auto;}  
-  header #logo{width: 250px;height: 250px;}
-  header #foto{width: calc(1270px - 300px);height: 250px;}
-  nav{width: 1270px;height: 125px;}
-  main{width: 1270px;height: 4600px;}
-  main .prin{height: 99%;width: 99%;}
-  main .aside_info{height: 24%;width: 99%;}
-  .titulos{font-size: 60px;}
-  .txt_info{font-size: 40px;}
-  main .prin .card .row .card-body .card-title{font-size: 50px;}
-  main .prin .card .row .card-body .card-text{font-size: 40px;}
-  main .prin .carousel .carousel-inner .carousel-item p{font-size: 40px;}
-  footer .navbar{height: 120px;width: 99%;}
-  .card .card-body ul li{font-size: 35px;}
-  .container-fluid{
-    justify-content: normal;
-  }
-  
+.titulo-logo {
+    font-size: 56px;
+    font-weight: bold;
+    background-color: rgba(252, 176, 141, 0.497);
+    padding: 7px;
+    border-radius: 5px;
 }
 
-@media(max-width: 1000px){
-    body{background-size: 1300px; width: max-content;}
-    header{width: 1270px;height: 300px;padding: 1em;margin: 0 auto;}  
-    header #logo{width: 250px;height: 250px;}
-    header #foto{width: calc(1270px - 300px);height: 250px;}
-    nav{width: 1270px;height: 125px;}
-    main{width: 1270px;height: 4600px;}
-    main .prin{height: 99%;width: 99%;}
-    main .aside_info{height: 24%;width: 99%;}
-    .titulos{font-size: 60px;}
-    .txt_info{font-size: 40px;}
-    main .prin .card .row .card-body .card-title{font-size: 50px;}
-    main .prin .card .row .card-body .card-text{font-size: 40px;}
-    main .prin .carousel .carousel-inner .carousel-item p{font-size: 40px;}
-    footer .navbar{height: 120px;width: 99%;}
-    .card .card-body ul li{font-size: 35px;}
-    .container-fluid{
-      justify-content: normal;
-    }
-    
-  }
+.slogan {
+    font-size: 20px;
+    font-style: italic;
+}

@@ -95,7 +95,8 @@ svg {
 }
 
 .linx:hover,
-.linx:focus {
+.linx:focus,
+.active {
     transition: all 0.4s ease;
     background: rgb(224, 224, 224);
     color: black;
@@ -110,6 +111,7 @@ main {
     width: 100%;
     padding: 0.7em 4em 0.7em 4em;
     max-height: 3000px;
+    contain: content;
 }
 
 .main-puro {
@@ -175,6 +177,7 @@ aside {
 
 .sergio {
     contain: content;
+    align-self: center;
     color: white;
     text-align: center;
     padding-left: 0.3em;

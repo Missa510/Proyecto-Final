@@ -7,13 +7,13 @@
         if($_GET['nave'] == "misiones"){
             include('Contenidos/mision.php');
         }
-        if($_GET['nave'] == "visiones"){
+        elseif($_GET['nave'] == "visiones"){
             include('Contenidos/vision.php');
         }
-        if($_GET['nave'] == "biografias"){
+        elseif($_GET['nave'] == "biografias"){
             include('Contenidos/biografia.php');
         }
-        if($_GET['nave'] == "habilidades"){
+        elseif($_GET['nave'] == "habilidades"){
             include('Contenidos/Habilidades.php');
         }
     }

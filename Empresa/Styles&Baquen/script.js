@@ -1,11 +1,15 @@
 // Variables globales
 const titulo = document.getElementById("titulo").textContent
 const nombre_empresa = document.getElementById("nombre_empresa").textContent
-
+const botones = document.getElementsByClassName("linx"), TextoBotones = botones.innerText
 //Funciones
 function ActualizarTitulo() {
-    if(titulo == "Administradores" || titulo == "Mostradores" || titulo == "Usuarios normales"){Fecha()}
+    if (titulo == "Administradores" || titulo == "Mostradores" || titulo == "Usuarios normales") { Fecha() }
     document.querySelector('TITLE').innerText = nombre_empresa + " | " + titulo
+}
+
+function Navegacion() {
+    
 }
 
 function Fecha() {
@@ -50,4 +54,5 @@ function ViewPassword() {
 }
 
 //Lo demás
-ActualizarTitulo() 
+ActualizarTitulo()
+Navegacion()

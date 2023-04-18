@@ -1,12 +1,5 @@
 <?php
     include("vista/web/diseno/cabecera.php");
-?>
-<?php
     include("vista/web/diseno/menu.php");
-?>
-<?php
     include("vista/web/diseno/contenido.php");
-?>
-<?php
-    include("vista/web/diseno/footer.php");
 ?>
