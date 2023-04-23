@@ -7,6 +7,10 @@
 -- Versión del servidor: 10.1.38-MariaDB
 -- Versión de PHP: 7.3.3
 
+CREATE DATABASE proyectomvc_v1;
+
+USE proyectomvc_v1;
+
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
 START TRANSACTION;
@@ -165,12 +169,12 @@ alter table acudientes add constraint acu_pad
 
 
 insert into estudiantes (identificacion,ape_est,nom_est,dir_est,pkcod_cur)
-  values  (100,'ESCOBAR 1','JUAN 1','CALLE 100',69),
-          (110,'ESCOBAR 2','JUAN 2','CALLE 110',69),
-          (200,'ESCOBAR 3','JUAN 3','CALLE 200',68),
-          (220,'ESCOBAR 4','JUAN 4','CALLE 220',68),
-          (300,'ESCOBAR 5','JUAN 5','CALLE 300',67),
-          (310,'ESCOBAR 6','JUAN 6','CALLE 310',67);
+  values  (100,'ESCOBAR 1','JUAN 1','CALLE 100',42),
+          (110,'ESCOBAR 2','JUAN 2','CALLE 110',43),
+          (200,'ESCOBAR 3','JUAN 3','CALLE 200',44),
+          (220,'ESCOBAR 4','JUAN 4','CALLE 220',45),
+          (300,'ESCOBAR 5','JUAN 5','CALLE 300',46),
+          (310,'ESCOBAR 6','JUAN 6','CALLE 310',47);
 
 
 insert into PADRES (identificacion,ape_pad,nom_pad,dir_pad)
@@ -180,10 +184,3 @@ insert into PADRES (identificacion,ape_pad,nom_pad,dir_pad)
           (2200,'ESCOBAR DOSMIL','JUAN','CALLE 220'),
           (1000,'ESCOBAR UNO','JUAN','CALLE 300'),
           (2000,'ESCOBAR DOS','JUAN','CALLE 310');
-
-
-
-
-
-
-

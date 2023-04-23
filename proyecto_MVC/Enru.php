@@ -28,6 +28,9 @@
             case 'cursos': //Instanciar
                 $control = new Admin_Cursos();
                 break;
+            case 'estudiantes': //Instanciar
+                $control = new Admin_Estudiantes();
+                break;
 
         }//Fin switch
 

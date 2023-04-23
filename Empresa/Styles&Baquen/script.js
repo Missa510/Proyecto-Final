@@ -4,7 +4,7 @@ const nombre_empresa = document.getElementById("nombre_empresa").textContent
 const botones = document.getElementsByClassName("linx"), TextoBotones = botones.innerText
 //Funciones
 function ActualizarTitulo() {
-    if (titulo == "Administradores" || titulo == "Mostradores" || titulo == "Usuarios normales") { Fecha() }
+    if (titulo == "Administradores" || titulo == "Moderadores" || titulo == "Usuarios normales") { Fecha() }
     document.querySelector('TITLE').innerText = nombre_empresa + " | " + titulo
 }
 

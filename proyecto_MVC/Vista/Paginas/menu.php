@@ -1,5 +1,5 @@
 <div class="container mt-4">
-    <h1 class="display-1">Meun principal</h1>
+    <h1 class="display-1">Menú principal</h1>
     <p class="fs-5">
         Eso es un texto Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit rerum repellendus aperiam id
         aliquam magni corrupti? Ipsum, deserunt quasi excepturi voluptas sunt repellat laborum reprehenderit sit

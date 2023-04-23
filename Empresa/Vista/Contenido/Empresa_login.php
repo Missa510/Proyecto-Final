@@ -15,7 +15,8 @@
                 alguna inquietud al momento de su sesión, por favor contactenos directamente a los
                 correos admitidos de la empresa cuyos dueños se encargarán de resolver y solventar
                 sus inquietudes &heartsuit;</strong><br><br>
-                <!-- ¿Aún no tienes una cuenta? <a href="?control=navegacion&&funcion=registro" class="link-dark">Regístrate</a> -->
+                ¿Aún no tienes una cuenta? <a href="?control=navegacion&&funcion=registro" class="link-dark">Regístrate aquí</a>
+                <br><br>
                 Al utilizar nuestros servicios, nos confías tus datos. Entendemos que es una gran 
                 responsabilidad y nos esforzamos al máximo para proteger tu información y permitirte 
                 controlarla.<br><br>

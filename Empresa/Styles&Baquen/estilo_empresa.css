@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+*{font-family: 'Ubuntu', sans-serif;}
+
 body {
     background: #abbaab;
     /* fallback for old browsers */
@@ -211,7 +215,7 @@ aside {
     float: center;
     font-size: 28px;
     color: white;
-    text-decoration: none;
+    text-decoration: underline;
     border-radius: 6px;
     padding: 3px;
 }
@@ -219,6 +223,7 @@ aside {
 .name:hover,
 .name:focus {
     transition: all 0.4s ease;
+    text-decoration: none;
     background-color: white;
     color: black;
 }
@@ -251,6 +256,13 @@ article {
     font-size: 16px;
     background-color: rgb(29, 29, 29);
     color: white;
+}
+
+.enviar:hover,
+.enviar:focus {
+    transition: all 0.4s ease;
+    background-color: rgb(20, 20, 20);
+    transform: scale(1.01);
 }
 
 .piedelogin {

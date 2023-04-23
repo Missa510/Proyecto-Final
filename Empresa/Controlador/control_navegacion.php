@@ -1,52 +1,57 @@
 <?php
 
+/**
+ * Summary of Paginas
+ */
+class Paginas
+{
     /**
-     * Summary of Paginas
+     * Summary of principal
+     * @return void
      */
-    class Paginas{
-        /**
-         * Summary of principal
-         * @return void
-         */
-        public function principal(){
-            include("Vista/Contenido/Empresa_init.php");
-        }
-        /**
-         * Summary of mision
-         * @return void
-         */
-        public function mision(){
-            include("Vista/Contenido/Empresa_mision.php");
-        }
-        /**
-         * Summary of vision
-         * @return void
-         */
-        public function vision(){
-            include("Vista/Contenido/Empresa_vision.php");
-        }
-        /**
-         * Summary of login
-         * @return void
-         */
-        public function login(){
-            include("Vista/Contenido/Empresa_login.php");
-        }
-        /**
-         * Summary of registro
-         * @return void
-         */
-        public function registro(){
-            include("Vista/Contenido/Empresa_login_registro.php");
-        }
-        
-        /**
-         * Summary of cuentas
-         * @return void
-         */
-        public function cuentas(){
-            include("Vista/Contenido/cuentas.php");
-        }
-    };
+    public function principal()
+    {
+        include("Vista/Contenido/Empresa_init.php");
+    }
+    /**
+     * Summary of mision
+     * @return void
+     */
+    public function mision()
+    {
+        include("Vista/Contenido/Empresa_mision.php");
+    }
+    /**
+     * Summary of vision
+     * @return void
+     */
+    public function vision()
+    {
+        include("Vista/Contenido/Empresa_vision.php");
+    }
+    /**
+     * Summary of login
+     * @return void
+     */
+    public function login()
+    {
+        include("Vista/Contenido/Empresa_login.php");
+    }
+    /**
+     * Summary of registro
+     * @return void
+     */
+    public function registro()
+    {
+        include("Vista/Contenido/Empresa_login_registro.php");
+    }
 
-?>
+    /**
+     * Summary of cuentas
+     * @return void
+     */
+    public function cuentas()
+    {
+        include("Vista/Contenido/cuentas.php");
+    }
+};

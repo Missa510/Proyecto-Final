@@ -14,7 +14,6 @@ class Clase_curso
         $this->CodCur = $Cod;
         $this->NomCur = $Nom;
         $this->CodSed = $Sed;
-
     } //fin de método constructor
 
     public function setCodCur($Cod)
@@ -59,7 +58,24 @@ class Clase_curso
         while ($registro = mysqli_fetch_array($resp)) {
             $this->datos[] = $registro;
         }
-        #Retrnar el arreglo
+        #Retornar el arreglo
         return $this->datos;
+    }
+
+    function RegCursos()
+    {
+        #Instanciar
+        $conectar = new Conexion();
+        #funcion de la conexion y llamar a la DB
+        $llamada = $conectar->con();
+
+        #Generar la consulta
+        $sql = "INSERT INTO cursos (pkcod_cur, nom_cur, fkcod_sede) VALUES ({$this->getCodCur()}, '{$this->getNomCur()}', {$this->getCodSed()});";
+        
+        #Procesar la consulta
+        $resp = mysqli_query($llamada, $sql);
+
+        #Retornar la respuesta
+        return $resp;
     }
 } //Fin clase

@@ -9,18 +9,19 @@
             <th scope="col">Correo (mail)</th>
             <th scope="col">Tipo</th>
         </thead>
-        <?php 
-            while($row = mysqli_fetch_assoc($mostrar_var)){
+        <?php
+        while ($row = mysqli_fetch_assoc($mostrar_var)) {
         ?>
-        <tbody>
-            <tr>
-                <td> <?php echo $row["id_mod"]; ?> </td>
-                <td> <?php echo $row["nom_mod"]; ?> </td>
-                <td> <?php echo $row["pass_mod"]; ?> </td>
-                <td> <a href="mailto:<?php echo $row["mail_mod"]; ?>" class="link-light"> <?php echo $row["mail_mod"]; ?> </a> </td>
-                <td> <?php echo $row["tipo_mod"]; ?> </td>
-            </tr>
-        </tbody>
-        <?php } mysqli_free_result($mostrar_var); ?>
+            <tbody>
+                <tr>
+                    <td> <?php echo $row["id_mod"]; ?> </td>
+                    <td> <?php echo $row["nom_mod"]; ?> </td>
+                    <td> <?php echo $row["pass_mod"]; ?> </td>
+                    <td> <a href="mailto:<?php echo $row["mail_mod"]; ?>" class="link-light"> <?php echo $row["mail_mod"]; ?> </a> </td>
+                    <td> <?php echo $row["tipo_mod"]; ?> </td>
+                </tr>
+            </tbody>
+        <?php }
+        mysqli_free_result($mostrar_var); ?>
     </table>
 </div>

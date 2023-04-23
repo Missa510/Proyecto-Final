@@ -64,9 +64,9 @@
         <div class="profile">
             <img src="Imagenes_generales/user.png" class="logo-user">
             <div class="user">
-                <p class="fs-3">Usuario: <?php echo "<strong>".$name."</strong>"; ?></p>
-                <p class="fs-3">Contraseña: <?php echo "<strong>".$pass."</strong>"; ?></p>
-                <p class="fs-3">Tipo de nivel: <?php echo "<strong>".$tipo."</strong>" ?></p>
+                <p class="fs-4">Usuario: <?php echo "<strong>".$name."</strong>"; ?></p>
+                <p class="fs-4">Contraseña: <?php echo "<strong>".$pass."</strong>"; ?></p>
+                <p class="fs-4">Tipo de nivel: <?php echo "<strong>".$tipo."</strong>" ?></p>
             </div>
         </div>
     </div>

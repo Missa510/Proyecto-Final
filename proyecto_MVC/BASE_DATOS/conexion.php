@@ -12,12 +12,9 @@
         }//Fin conexion
     }//Fin conexion
 
-    /* Probar a conexion a la base de datos 
-    $prueba = new Conexion();
+    #Probar a conexion a la base de datos 
+    /*$prueba = new Conexion();
 
     if ($prueba->con()){echo "Si existe la conexion a la base de datos :3";}//Fin if
     else{echo "No hay conexion a la base de datos :(";}//Fin else
-        
     */
-
-?>
