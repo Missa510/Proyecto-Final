@@ -7,10 +7,6 @@
 -- Versión del servidor: 10.1.38-MariaDB
 -- Versión de PHP: 7.3.3
 
-CREATE DATABASE proyectomvc_v1;
-
-USE proyectomvc_v1;
-
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
 START TRANSACTION;

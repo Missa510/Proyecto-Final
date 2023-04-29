@@ -1,6 +1,6 @@
-<?php
-    include("Vista/Componentes/hd.php"); 
-    include("Vista/Componentes/nav.php"); 
+<?php 
+    include("Vista/Componentes/PartesDePagina/hd.php"); 
+    include("Vista/Componentes/PartesDePagina/nav.php"); 
 ?>
 <main>
     <div class="main-puro">
@@ -17,11 +17,11 @@
             </p>
             <h1 class="display-5 text-center">Usuarios admitidos (remover próximamente)</h1>
             <?php 
-                include("Vista/Componentes/tabla_admin.php");
-                include("Vista/Componentes/tabla_mod.php");
-                include("Vista/Componentes/tabla_usu.php");
+                include("Vista/Componentes/Tablas/tabla_admin.php");
+                include("Vista/Componentes/Tablas/tabla_mod.php");
+                include("Vista/Componentes/Tablas/tabla_usu.php");
             ?>
         </div>
     </div>
 </main>
-<?php include("Vista/Componentes/foot.php"); ?>
+<?php include("Vista/Componentes/PartesDePagina/foot.php"); ?>

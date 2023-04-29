@@ -8,9 +8,6 @@ function ActualizarTitulo() {
     document.querySelector('TITLE').innerText = nombre_empresa + " | " + titulo
 }
 
-function Navegacion() {
-    
-}
 
 function Fecha() {
     // Mostrar la fecha de hoy
@@ -55,4 +52,3 @@ function ViewPassword() {
 
 //Lo demás
 ActualizarTitulo()
-Navegacion()

@@ -41,19 +41,19 @@
         </thead>
         <tbody class="table-group-divider">
             <tr>
-                <?php foreach ($listado as $IAmTheStrorm) { ?>
+                <?php foreach ($listado as $IAmTheStorm) { ?>
 
                     <th scope="row">
-                        <?= $IAmTheStrorm["pkcod_cur"]; ?>
+                        <?= $IAmTheStorm["pkcod_cur"]; ?>
                     </th>
                     <td>
-                        <?= $IAmTheStrorm["nom_cur"]; ?>
+                        <?= $IAmTheStorm["nom_cur"]; ?>
                     </td>
                     <td>
-                        <?= $IAmTheStrorm["fkcod_sede"]; ?>
+                        <?= $IAmTheStorm["fkcod_sede"]; ?>
                     </td>
-                    <td> <button class="btn btn-outline-warning">Modificar</button> </td>
-                    <td> <button class="btn btn-outline-danger">Eliminar</button> </td>
+                    <td> <a href="?clase=cursos&&funcion=ModificarCursos&&cod_act=<?= $IAmTheStorm["pkcod_cur"]; ?>" class="btn btn-outline-warning">Modificar</a> </td>
+                    <td> <a href="" class="btn btn-outline-danger">Eliminar</a> </td>
 
             </tr>
         <?php } #Fin del foreach 

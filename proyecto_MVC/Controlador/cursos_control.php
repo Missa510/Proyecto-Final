@@ -5,11 +5,11 @@ require_once("Modelo\log_cursos.php");
 require_once("Modelo\log_sedes.php");
 class Admin_Cursos
 {
-    function ppal_cursos()
+    public function ppal_cursos()
     {
         #Instanciar del combo de la sede
         $reporteCombo = new Clase_Sedes(null, null);
-        
+
         #Llamar a la funcion del combo
         $listaCombo = $reporteCombo->ComboSede();
 
@@ -21,15 +21,15 @@ class Admin_Cursos
 
         //llamara al formilaio de cursos
         require_once("Vista/Cursos/frm_cursos.php");
-
     } //Fin ppal_cursos
 
-    function InserCursos(){
+    public function InserCursos()
+    {
         $cod = $_POST["txCodCur"];
         $nom = $_POST["txNomCur"];
         $sede = $_POST["cbSede"];
 
-        #Instanciar lógiva de cursos
+        #Instanciar lógica de cursos
         $datos = new Clase_curso($cod, $nom, $sede);
 
         #Llamar a RegCursos
@@ -37,6 +37,43 @@ class Admin_Cursos
 
         #Actualizar la lista
         $this->ppal_cursos();
-    }#Fin InserCursos
+    } #Fin InserCursos
 
-} //Fin Admin_Cursos
+    public function ModificarCursos()
+    {
+        #Asignar la variable cod_act
+        $cod_mod = $_GET["cod_act"];
+
+        #Instanciar lógica de cursos
+        $moder = new Clase_curso($cod_mod, null, null);
+        $reporte = $moder->BuscarCursos();
+
+        #Instanciar del combo de la sede
+        $reporteCombo = new Clase_Sedes(null, null);
+
+        #Llamar a la funcion del combo
+        $listaCombo = $reporteCombo->ComboSede();
+
+
+        #Llamar al formulario modificar
+        require_once("Vista/Cursos/frm_cursoso_modificar.php");
+    } #Fin ModificarCursos
+
+    public function ActualizarCursos()
+    {
+        $cod = $_POST["txCodCur"];
+        $nom = $_POST["txNomCur"];
+        $sede = $_POST["cbSede"];
+
+        #Instanciar lógica de cursos
+        $datos = new Clase_curso($cod, $nom, $sede);
+
+        #Llamar a RegCursos
+        $actualizar = $datos->ActualizarCursos();
+
+        #Actualizar la lista
+        $this->ppal_cursos();
+
+    } #Fin ActualizarCursos
+
+}; //Fin Admin_Cursos

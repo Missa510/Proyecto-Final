@@ -7,7 +7,7 @@
                 return $conexiones_base = mysqli_connect("localhost", "root", "", "usuario_proyecto");
             }
             catch(Exception $e){ //Por si hay error
-                echo "<script> alert('Error al conectarse a la base de datos :(') </script> <i>". $e. "</i><br>";
+                echo "<script> alert('Error al conectarse a la base de datos :(') </script> <p class='fs-5'> Error técnico:". $e. "</p><br>";
             }
         }
     }

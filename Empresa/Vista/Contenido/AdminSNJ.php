@@ -1,6 +1,6 @@
 <?php 
-    include("Vista/Componentes/hd.php"); 
-    include("Vista/Componentes/nav_users.php"); 
+    include("Vista/Componentes/PartesDePagina/hd.php"); 
+    include("Vista/Componentes/PartesDePagina/nav_users.php"); 
 ?>
 <main>
     <div class="main-puro">
@@ -69,6 +69,12 @@
                 <p class="fs-4">Tipo de nivel: <?php echo "<strong>".$tipo."</strong>" ?></p>
             </div>
         </div>
+        <h1 class="display-2 text-center">Control de usuarios</h1>
+        <?php
+        require_once("Vista/Componentes/Tablas/tabla_admin_PerAdmin.php");
+        require_once("Vista/Componentes/Tablas/tabla_mod_PerAdmin.php");
+        require_once("Vista/Componentes/Tablas/tabla_usu_PerAdmin.php");
+        ?>
     </div>
 </main>
-<?php include("Vista/Componentes/foot.php"); ?>
+<?php include("Vista/Componentes/PartesDePagina/foot.php"); ?>

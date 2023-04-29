@@ -103,4 +103,22 @@ class Usuarios
         #echo '<p class="fs-5">'.$sql.'</p>';
         return $resuls_usus;
     }
+
+    public function Actualizar(){
+        #Instanciar la conexión
+        $base = new BaseDeDatos();
+
+        #llamar a la base de datos
+        $conex_var = $base->conex();
+
+        #Generar la consulta de datos
+        $sql = "UPDATE Usuario_Corriente SET nom_usu = '{$this->getNom_usu()}', pass_usu = {$this->getPass_usu()}, mail_usu = {$this->getMail_usu()} WHERE id_usu = {$this->getId_usu()};";
+
+        #Procesar la consulta de datos
+        $resuls_usus = mysqli_query($conex_var, $sql);
+
+        #Retornar el valor de la consulta
+        #echo '<p class="fs-5">'.$sql.'</p>';
+        return $resuls_usus;
+   }
 };

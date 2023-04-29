@@ -1,6 +1,6 @@
 <?php 
-    include("Vista/Componentes/hd.php"); 
-    include("Vista/Componentes/nav.php"); 
+    include("Vista/Componentes/PartesDePagina/hd.php"); 
+    include("Vista/Componentes/PartesDePagina/nav.php"); 
 ?>
 <main>
     <article>
@@ -11,6 +11,6 @@
         </p>
         <img src="Imagenes_generales/vis.jpg" alt="visión image" class="vis">
     </article>
-    <?php include("Vista/Componentes/aside.php"); ?>
+    <?php include("Vista/Componentes/PartesDePagina/aside.php"); ?>
 </main>
-<?php include("Vista/Componentes/foot.php"); ?>
+<?php include("Vista/Componentes/PartesDePagina/foot.php"); ?>

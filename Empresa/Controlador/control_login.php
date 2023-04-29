@@ -2,16 +2,14 @@
 
 session_start();
 
-
 class Login
 {
-    // function conex(){require_once("Conexion/conexion_base.php");}
     public function logear()
     {
 
-        $name = $_POST['sus'];
-        $pass = $_POST['pass'];
-        $tipo = $_POST['tipo'];
+        $name = htmlentities($_POST["sus"], ENT_QUOTES, 'UTF-8', true);
+        $pass = htmlentities($_POST["pass"], ENT_QUOTES, 'UTF-8', true);
+        $tipo = $_POST["tipo"];
 
         sleep(0.7);
 
@@ -28,7 +26,7 @@ class Login
             if ($rows) {
                 include("Vista/Contenido/AdminSNJ.php");
             } else {
-                include("Vista/Componentes/error_login.php");
+                include("Vista/Componentes/Errores/error_login.php");
             }
         }
 
@@ -40,11 +38,10 @@ class Login
 
             $rows = mysqli_num_rows($clase_login); // Pasar por cada fila
 
-
             if ($rows) {
                 include("Vista/Contenido/ModerSNJ.php");
             } else {
-                include("Vista/Componentes/error_login.php");
+                include("Vista/Componentes/Errores/error_login.php");
             }
         }
 
@@ -56,14 +53,13 @@ class Login
 
             $rows = mysqli_num_rows($clase_login); // Pasar por cada fila
 
-
             if ($rows) {
                 include("Vista/Contenido/UsuNomSNJ.php");
             } else {
-                include("Vista/Componentes/error_login.php");
+                include("Vista/Componentes/Errores/error_login.php");
             }
         } else {
-            include("Vista/Componentes/error_login.php");
+            include("Vista/Componentes/Errores/error_login.php");
         }
     }
 };

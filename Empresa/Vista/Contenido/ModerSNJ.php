@@ -1,6 +1,6 @@
 <?php 
-    include("Vista/Componentes/hd.php"); 
-    include("Vista/Componentes/nav_users.php"); 
+    include("Vista/Componentes/PartesDePagina/hd.php"); 
+    include("Vista/Componentes/PartesDePagina/nav_users.php"); 
 ?>
 <main>
     <div class="main-puro">
@@ -34,4 +34,4 @@
         </div>
     </div>
 </main>
-<?php include("Vista/Componentes/foot.php"); ?>
+<?php include("Vista/Componentes/PartesDePagina/foot.php"); ?>

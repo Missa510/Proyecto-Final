@@ -51,7 +51,7 @@ class Clase_curso
         $llamada = $conectar->con();
 
         #Consulta a ejecutar
-        $sql = "SELECT * FROM cursos";
+        $sql = "SELECT * FROM cursos;";
         #Procesar la consulta y llamar a la DB
         $resp = mysqli_query($llamada, $sql); #Conexion y la consulta 
         #Generar y enviar
@@ -62,7 +62,7 @@ class Clase_curso
         return $this->datos;
     }
 
-    function RegCursos()
+    public function RegCursos()
     {
         #Instanciar
         $conectar = new Conexion();
@@ -71,6 +71,45 @@ class Clase_curso
 
         #Generar la consulta
         $sql = "INSERT INTO cursos (pkcod_cur, nom_cur, fkcod_sede) VALUES ({$this->getCodCur()}, '{$this->getNomCur()}', {$this->getCodSed()});";
+
+        #Procesar la consulta
+        $resp = mysqli_query($llamada, $sql);
+
+        #Retornar la respuesta
+        return $resp;
+    }
+
+    public function BuscarCursos()
+    {
+        #Instanciar
+        $conectar = new Conexion();
+        #funcion de la conexion y llamar a la DB
+        $llamada = $conectar->con();
+
+        #Generar la consulta
+        $sql = "SELECT * FROM cursos WHERE pkcod_cur = {$this->getCodCur()};";
+
+
+        #Procesar la consulta
+        $resp = mysqli_query($llamada, $sql);
+
+        #Generar y enviar
+        while ($registro = mysqli_fetch_array($resp)) {
+            $this->datos[] = $registro;
+        }
+        #Retornar el arreglo
+        return $this->datos;
+    }
+
+    public function ActualizarCursos()
+    {
+        #Instanciar
+        $conectar = new Conexion();
+        #funcion de la conexion y llamar a la DB
+        $llamada = $conectar->con();
+
+        #Generar la consulta
+        $sql = "UPDATE cursos SET nom_cur = '{$this->getNomCur()}', fkcod_sede = {$this->getCodSed()} WHERE pkcod_cur = {$this->getCodCur()};";
         
         #Procesar la consulta
         $resp = mysqli_query($llamada, $sql);
@@ -78,4 +117,4 @@ class Clase_curso
         #Retornar la respuesta
         return $resp;
     }
-} //Fin clase
+}; //Fin clase

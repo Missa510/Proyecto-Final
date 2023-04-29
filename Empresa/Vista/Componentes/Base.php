@@ -13,6 +13,6 @@
 <body>
     <?php include('Enru.php'); ?>
     <script src="../Bootstrap/js/bootstrap.bundle.js"></script>
-    <script src="Styles&Baquen\script.js"></script>
+    <script src="Styles&Baquen/script.js"></script>
 </body>
 </html>

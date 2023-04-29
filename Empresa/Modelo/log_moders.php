@@ -103,4 +103,22 @@ class Moderadores
         #echo '<p class="fs-5">'.$sql.'</p>';
         return $resuls_mods;
     }
+
+    public function Actualizar(){
+        #Instanciar la conexión
+        $base = new BaseDeDatos();
+
+        #llamar a la base de datos
+        $conex_var = $base->conex();
+
+        #Generar la consulta de datos
+        $sql = "UPDATE Moderadores SET nom_mod = '{$this->getNom_mod()}', pass_mod = {$this->getPass_mod()}, mail_mod = {$this->getMail_mod()} WHERE id_mod = {$this->getId_mod()};";
+
+        #Procesar la consulta de datos
+        $resuls_mods = mysqli_query($conex_var, $sql);
+
+        #Retornar el valor de la consulta
+        #echo '<p class="fs-5">'.$sql.'</p>';
+        return $resuls_mods;
+   }
 };
