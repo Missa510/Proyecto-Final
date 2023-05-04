@@ -3,7 +3,7 @@ require_once("Conexion/conexion_base.php");
 class Administradores
 {
 
-    private $Id_admin, $nom_admin, $pass_admin, $mail_admin;
+    private $Id_admin, $nom_admin, $pass_admin, $mail_admin, $datos;
 
     public function __construct($id, $user, $passw, $mail)
     {
@@ -84,8 +84,9 @@ class Administradores
         #echo '<p class="fs-5">'.$sql.'</p>';
         return $resuls_admins;
     }
-    public function LoginBuscar(){
-        
+    public function LoginBuscar()
+    {
+
         #Instanciar la conexión
         $base = new BaseDeDatos();
 
@@ -103,22 +104,45 @@ class Administradores
         return $resuls_admins;
     }
 
-    public function Actualizar(){
-         #Instanciar la conexión
-         $base = new BaseDeDatos();
+    public function Buscar(){
+        
+        #Instanciar la conexión
+        $base = new BaseDeDatos();
 
-         #llamar a la base de datos
-         $conex_var = $base->conex();
- 
-         #Generar la consulta de datos
-         $sql = "UPDATE Administradores SET nom_admin = '{$this->getNom_admin()}', pass_admin = {$this->getPass_admin()}, mail_admin = {$this->getMail_admin()} WHERE id_admin = {$this->getId_admin()};";
- 
-         #Procesar la consulta de datos
-         $resuls_admins = mysqli_query($conex_var, $sql);
- 
-         #Retornar el valor de la consulta
-         #echo '<p class="fs-5">'.$sql.'</p>';
-         return $resuls_admins;
+        #llamar a la base de datos
+        $conex_var = $base->conex();
+
+        #Generar la consulta de datos
+        $sql = "SELECT * FROM Administradores WHERE id_admin = {$this->getId_admin()}";
+
+        #Procesar la consulta de datos
+        $resuls_admins = mysqli_query($conex_var, $sql);
+
+        #Retornar el valor de la consulta
+        #echo '<p class="fs-5">'.$sql.'</p>';
+
+        while ($registro = mysqli_fetch_array($resuls_admins)) {
+            $this->datos[] = $registro;
+        }
+
+        return $this->datos;
     }
-    
+
+    public function Actualizar()
+    {
+        #Instanciar la conexión
+        $base = new BaseDeDatos();
+
+        #llamar a la base de datos
+        $conex_var = $base->conex();
+
+        #Generar la consulta de datos
+        $sql = "UPDATE Administradores SET nom_admin = '{$this->getNom_admin()}', pass_admin = '{$this->getPass_admin()}', mail_admin = '{$this->getMail_admin()}' WHERE id_admin = {$this->getId_admin()};";
+
+        #Procesar la consulta de datos
+        $resuls_admins = mysqli_query($conex_var, $sql);
+
+        #Retornar el valor de la consulta
+        return $resuls_admins;
+    }
 };

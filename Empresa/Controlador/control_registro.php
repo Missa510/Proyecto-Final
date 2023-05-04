@@ -5,9 +5,9 @@ class Register
     {
         session_start();
 
-        $nom = htmlentities($_POST["sus"], ENT_NOQUOTES, 'UTF-8', false);
-        $pass = htmlentities($_POST["pass"], ENT_NOQUOTES, 'UTF-8', false);
-        $email = htmlentities($_POST["email"], ENT_NOQUOTES, 'UTF-8', false);
+        $nom = $_POST["sus"];
+        $pass = $_POST["pass"];
+        $email = $_POST["email"];
         $tipo = $_POST["tipo"];
 
         if ($tipo == "Administrador" or $tipo == "Moderador") {

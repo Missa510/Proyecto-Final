@@ -28,6 +28,10 @@ function Navegacion($control, $funcion)
         case 'registro':
             $control = new Register();
             break;
+
+        case 'modificar':
+            $control = new Modify();
+            break;
     }
 
     $control->{$funcion}();

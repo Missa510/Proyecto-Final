@@ -4,7 +4,7 @@ require_once("Conexion/conexion_base.php");
 class Usuarios
 {
 
-    private $Id_usu, $nom_usu, $pass_usu, $mail_usu;
+    private $Id_usu, $nom_usu, $pass_usu, $mail_usu, $datos;
 
     public function __construct($id, $user, $passw, $mail)
     {
@@ -104,6 +104,30 @@ class Usuarios
         return $resuls_usus;
     }
 
+    public function Buscar(){
+        
+        #Instanciar la conexión
+        $base = new BaseDeDatos();
+
+        #llamar a la base de datos
+        $conex_var = $base->conex();
+
+        #Generar la consulta de datos
+        $sql = "SELECT * FROM Usuario_Corriente WHERE id_usu = {$this->getId_usu()}";
+
+        #Procesar la consulta de datos
+        $resuls_admins = mysqli_query($conex_var, $sql);
+
+        #Retornar el valor de la consulta
+        #echo '<p class="fs-5">'.$sql.'</p>';
+
+        while ($registro = mysqli_fetch_array($resuls_admins)) {
+            $this->datos[] = $registro;
+        }
+
+        return $this->datos;
+    }
+
     public function Actualizar(){
         #Instanciar la conexión
         $base = new BaseDeDatos();
@@ -112,13 +136,11 @@ class Usuarios
         $conex_var = $base->conex();
 
         #Generar la consulta de datos
-        $sql = "UPDATE Usuario_Corriente SET nom_usu = '{$this->getNom_usu()}', pass_usu = {$this->getPass_usu()}, mail_usu = {$this->getMail_usu()} WHERE id_usu = {$this->getId_usu()};";
+        $sql = "UPDATE Usuario_Corriente SET nom_usu = '{$this->getNom_usu()}', pass_usu = '{$this->getPass_usu()}', mail_usu = '{$this->getMail_usu()}' WHERE id_usu = {$this->getId_usu()};";
 
         #Procesar la consulta de datos
         $resuls_usus = mysqli_query($conex_var, $sql);
-
         #Retornar el valor de la consulta
-        #echo '<p class="fs-5">'.$sql.'</p>';
         return $resuls_usus;
    }
 };

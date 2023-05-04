@@ -300,6 +300,7 @@ article {
     border-radius: 5px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .error-logo svg {

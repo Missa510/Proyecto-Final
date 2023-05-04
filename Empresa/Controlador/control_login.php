@@ -7,8 +7,8 @@ class Login
     public function logear()
     {
 
-        $name = htmlentities($_POST["sus"], ENT_QUOTES, 'UTF-8', true);
-        $pass = htmlentities($_POST["pass"], ENT_QUOTES, 'UTF-8', true);
+        $name = htmlentities($_POST["sus"]);
+        $pass = $_POST["pass"];
         $tipo = $_POST["tipo"];
 
         sleep(0.7);

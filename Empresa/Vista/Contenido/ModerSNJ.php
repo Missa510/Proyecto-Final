@@ -32,6 +32,8 @@
                 <p class="fs-3">Tipo de nivel: <?php echo "<strong>".$tipo."</strong>" ?></p>
             </div>
         </div>
+        <h1 class="display-2 text-center">Control de usuarios</h1>
+        <?php require_once("Vista/Componentes/Tablas/tabla_usu_PerAdmin.php"); ?>
     </div>
 </main>
 <?php include("Vista/Componentes/PartesDePagina/foot.php"); ?>
