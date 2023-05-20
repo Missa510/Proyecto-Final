@@ -14,7 +14,7 @@ class Modify
 
             $idAdmin = $_GET["id_admin"];
 
-            $modify = new Administradores($idAdmin, NULL, NULL, NULL);
+            $modify = new Administradores($idAdmin, NULL, NULL, NULL, NULL);
             $rep = $modify->Buscar();
 
             require_once("Vista\Contenido\Formularios\Mod_admin.php");
@@ -24,7 +24,7 @@ class Modify
 
             $idMod = $_GET["id_mod"];
 
-            $modify = new Moderadores($idMod, NULL, NULL, NULL);
+            $modify = new Moderadores($idMod, NULL, NULL, NULL, NULL);
             $rep = $modify->Buscar();
 
             require_once("Vista\Contenido\Formularios\Mod_moder.php");
@@ -34,7 +34,7 @@ class Modify
 
             $idUsu = $_GET["id_usu"];
 
-            $modify = new Usuarios($idUsu, NULL, NULL, NULL);
+            $modify = new Usuarios($idUsu, NULL, NULL, NULL, NULL);
             $rep = $modify->Buscar();
 
             require_once("Vista\Contenido\Formularios\Mod_user.php");
@@ -52,7 +52,7 @@ class Modify
             
             require_once("Modelo\log_admin.php");
 
-            $datosAct = new Administradores($id, $nom, $pass, $email);
+            $datosAct = new Administradores($id, $nom, $pass, $email, NULL);
             $datosActFunc = $datosAct->Actualizar();
 
             if($datosActFunc){
@@ -66,7 +66,7 @@ class Modify
             
             require_once("Modelo\log_moders.php");
 
-            $datosAct = new Moderadores($id, $nom, $pass, $email);
+            $datosAct = new Moderadores($id, $nom, $pass, $email, NULL);
             $datosActFunc = $datosAct->Actualizar();
 
             if($datosActFunc){
@@ -80,7 +80,7 @@ class Modify
             
             require_once("Modelo\log_users.php");
 
-            $datosAct = new Usuarios($id, $nom, $pass, $email);
+            $datosAct = new Usuarios($id, $nom, $pass, $email, NULL);
             $datosActFunc = $datosAct->Actualizar();
 
             if($datosActFunc){

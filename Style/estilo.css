@@ -45,3 +45,51 @@ header {
     font-size: 20px;
     font-style: italic;
 }
+
+
+.display-1{
+    font-size: 56px;
+    font-weight: bold;
+    background-color: rgba(252, 176, 141, 0.497);
+    margin: 15px 50px;
+    padding: 7px 7px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.card{
+    margin: auto;
+    padding: 0%;
+}
+
+.row{
+    margin: 50px;
+    padding: 50px;
+}
+
+.aside_info .card .txt_info{
+    padding: 15px;
+}
+
+.contacto{
+    margin: auto;
+    text-align: center;
+}
+
+
+
+#carouselExampleCaptions{
+    max-width: 75%;
+    margin: auto;
+    padding: 0%;
+}
+
+p{
+    font-size: 24px;
+}
+
+
+.carrou img{
+    width: 80%;
+    height: 500px;
+}

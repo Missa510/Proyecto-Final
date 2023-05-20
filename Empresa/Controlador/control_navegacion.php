@@ -46,6 +46,19 @@ class Paginas
         include("Vista/Contenido/Empresa_login_registro.php");
     }
 
+    public function registroAdmin()
+    {
+        include("Vista\Contenido\Formularios\Regis_admin.php");
+    }
+    public function registroModer()
+    {
+        include("Vista\Contenido\Formularios\Regis_moder.php");
+    }
+    public function registroUser()
+    {
+        include("Vista\Contenido\Formularios\Regis_user.php");
+    }
+
     /**
      * Summary of cuentas
      * @return void

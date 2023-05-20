@@ -4,14 +4,15 @@ require_once("Conexion/conexion_base.php");
 class Usuarios
 {
 
-    private $Id_usu, $nom_usu, $pass_usu, $mail_usu, $datos;
+    private $Id_usu, $nom_usu, $pass_usu, $mail_usu, $esta_usu, $datos;
 
-    public function __construct($id, $user, $passw, $mail)
+    public function __construct($id, $user, $passw, $mail, $estado)
     {
         $this->Id_usu = $id;
         $this->nom_usu = $user;
         $this->pass_usu = $passw;
         $this->mail_usu = $mail;
+        $this->esta_usu = $estado;
     }
 
     #Métodos gets
@@ -31,6 +32,10 @@ class Usuarios
     {
         return $this->mail_usu;
     }
+    public function getEst_usu()
+    {
+        return $this->esta_usu;
+    }
 
     #Métodos sets
     public function setId_usu($id)
@@ -49,6 +54,10 @@ class Usuarios
     {
         $this->mail_usu = $mail;
     }
+    public function setEst_usu($estado)
+    {
+        $this->esta_usu = $estado;
+    }
     public function Mostrar()
     {
         #Instanciar la conexión
@@ -58,7 +67,7 @@ class Usuarios
         $conex_var = $base->conex();
 
         #Generar la consulta de datos
-        $sql = "SELECT * FROM Usuario_Corriente;";
+        $sql = "SELECT * FROM Usuario_Corriente WHERE fkestado = 1;";
 
         #Procesar la consulta de datos
         $resuls_usus = mysqli_query($conex_var, $sql);
@@ -66,6 +75,23 @@ class Usuarios
         #Retornar el valor de la consulta
         #echo '<p class="fs-5">'.$sql.'</p>';
         return $resuls_usus;
+    }
+    public function MostrarConEstados()
+    {
+        $base = new BaseDeDatos();
+
+        #llamar a la base de datos
+        $conex_var = $base->conex();
+
+        #Generar la consulta de datos
+        $sql = "SELECT usu.id_usu, usu.mail_usu, usu.nom_usu, usu.pass_usu, usu.tipo_usu, est.estado_nom FROM Usuario_Corriente AS usu, Estado AS est WHERE usu.fkestado = est.pkestado;";
+
+        #Procesar la consulta de datos
+        $resuls_usu = mysqli_query($conex_var, $sql);
+
+        #Retornar el valor de la consulta
+        #echo '<p class="fs-5">'.$sql.'</p>';
+        return $resuls_usu;
     }
     public function Insertar()
     {
@@ -142,5 +168,22 @@ class Usuarios
         $resuls_usus = mysqli_query($conex_var, $sql);
         #Retornar el valor de la consulta
         return $resuls_usus;
-   }
+    }
+    public function Eliminar()
+    {
+        #Instanciar la conexión
+        $base = new BaseDeDatos();
+
+        #llamar a la base de datos
+        $conex_var = $base->conex();
+
+        #Generar la consulta de datos
+        $sql = "UPDATE Usuario_Corriente SET fkestado = {$this->getEst_usu()} WHERE id_usu = {$this->getId_usu()};";
+
+        #Procesar la consulta de datos
+        $resuls_mods = mysqli_query($conex_var, $sql);
+
+        #Retornar el valor de la consulta
+        return $resuls_mods;
+    }
 };

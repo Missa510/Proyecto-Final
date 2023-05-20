@@ -3,14 +3,15 @@ require_once("Conexion/conexion_base.php");
 class Administradores
 {
 
-    private $Id_admin, $nom_admin, $pass_admin, $mail_admin, $datos;
+    private $Id_admin, $nom_admin, $pass_admin, $mail_admin, $esta_admin, $datos;
 
-    public function __construct($id, $user, $passw, $mail)
+    public function __construct($id, $user, $passw, $mail, $estado)
     {
         $this->Id_admin = $id;
         $this->nom_admin = $user;
         $this->pass_admin = $passw;
         $this->mail_admin = $mail;
+        $this->esta_admin = $estado;
     }
 
     #Métodos gets
@@ -30,6 +31,10 @@ class Administradores
     {
         return $this->mail_admin;
     }
+    public function getEst_admin()
+    {
+        return $this->esta_admin;
+    }
 
     #Métodos sets
     public function setId_admin($id)
@@ -48,6 +53,10 @@ class Administradores
     {
         $this->mail_admin = $mail;
     }
+    public function setEst_admin($estado)
+    {
+        $this->esta_admin = $estado;
+    }
     public function Mostrar()
     {
         #Instanciar la conexión
@@ -57,7 +66,7 @@ class Administradores
         $conex_var = $base->conex();
 
         #Generar la consulta de datos
-        $sql = "SELECT * FROM Administradores;";
+        $sql = "SELECT * FROM Administradores WHERE fkestado = 1;";
 
         #Procesar la consulta de datos
         $resuls_admins = mysqli_query($conex_var, $sql);
@@ -66,6 +75,25 @@ class Administradores
         #echo '<p class="fs-5">'.$sql.'</p>';
         return $resuls_admins;
     }
+
+    public function MostrarConEstados()
+    {
+        $base = new BaseDeDatos();
+
+        #llamar a la base de datos
+        $conex_var = $base->conex();
+
+        #Generar la consulta de datos
+        $sql = "SELECT adm.id_admin, adm.mail_admin, adm.nom_admin, adm.pass_admin, adm.tipo_admin, est.estado_nom FROM Administradores AS adm, Estado AS est WHERE adm.fkestado = est.pkestado;";
+
+        #Procesar la consulta de datos
+        $resuls_admins = mysqli_query($conex_var, $sql);
+
+        #Retornar el valor de la consulta
+        #echo '<p class="fs-5">'.$sql.'</p>';
+        return $resuls_admins;
+    }
+
     public function Insertar()
     {
         #Instanciar la conexión
@@ -104,8 +132,9 @@ class Administradores
         return $resuls_admins;
     }
 
-    public function Buscar(){
-        
+    public function Buscar()
+    {
+
         #Instanciar la conexión
         $base = new BaseDeDatos();
 
@@ -145,4 +174,22 @@ class Administradores
         #Retornar el valor de la consulta
         return $resuls_admins;
     }
-};
+    public function Eliminar()
+    {
+        #Instanciar la conexión
+        $base = new BaseDeDatos();
+
+        #llamar a la base de datos
+        $conex_var = $base->conex();
+
+        #Generar la consulta de datos
+        $sql = "UPDATE Administradores SET fkestado = {$this->getEst_admin()} WHERE id_admin = {$this->getId_admin()};";
+
+        #Procesar la consulta de datos
+        $resuls_admins = mysqli_query($conex_var, $sql);
+
+        #Retornar el valor de la consulta
+        return $resuls_admins;
+    }
+}
+;
