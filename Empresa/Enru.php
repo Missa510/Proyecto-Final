@@ -22,27 +22,12 @@ function Navegacion($control, $funcion, $val)
 
     require_once("Controlador/control_" . $control . ".php");
 
-    switch ($control) {
-        case 'navegacion':
-            $control = new Paginas();
-            break;
-
-        case 'login':
-            $control = new Login();
-            break;
-
-        case 'registro':
-            $control = new Register();
-            break;
-
-        case 'modificar':
-            $control = new Modify();
-            break;
-
-        case 'eliminar':
-            $control = new Eliminar();
-            break;
-
-    }
+    $control = match ($control) {
+        'navegacion' => new Paginas(),
+        'login' => new Login(),
+        'registro' => new Register(),
+        'modificar' => new Modify(),
+        'eliminar' => new Eliminar(),
+    };
     $control->{$funcion}();
 }

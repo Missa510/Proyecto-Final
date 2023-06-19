@@ -14,8 +14,8 @@ $est = $rep[0]["fkestado"];
     <div class="main-puro">
         <h1 class="display-1 text-center mb-4" id="titulo">Modificar usuarios</h1>
         <p class="fs-5">
-            <strong>Nota del desarrollador:</strong> Cuando termines de actualizar el usuario, la sesión se te acabará y
-            debes volver a ingresar, pio perdo por eso -_- Para regresar a la página principal sin hacer ningún cambio
+            <strong>Nota de los desarrolladores:</strong> Cuando termines de actualizar el usuario, la sesión se te acabará y
+            debes volver a ingresar, pedimos perdón por eso. Para regresar a la página principal sin hacer ningún cambio
             al usuario, debes apretar la tecla <code>alt</code> seguido de la flecha izquiera <code>&leftarrow;</code>.
             A continuación, debes refrescar la página y listo 😊
         </p>
@@ -26,7 +26,6 @@ $est = $rep[0]["fkestado"];
                     <input type="text" name="sus" class="form-control" id="Usuarios" value="<?= $sus; ?>"
                         placeholder="Usuario" required>
                     <label for="Usuarios">Usuario</label>
-                    <div class="form-text text-dark">Debe ser original y no debe olvidarse nunca</div>
                 </div>
                 <div class="form-floating col">
                     <div class="form-floating">
@@ -34,7 +33,6 @@ $est = $rep[0]["fkestado"];
                             placeholder="Password" required>
                         <label for="Password">Password</label>
                     </div>
-                    <div class="form-text text-dark">Debe tener máximo 15 caracteres</div>
                 </div>
             </div>
             <button class="btn btn-dark mb-3 col-2" type="button" onclick="ViewPassword()">
@@ -51,7 +49,6 @@ $est = $rep[0]["fkestado"];
                     <input type="email" name="email" class="form-control" id="Email" value="<?= $mail; ?>"
                         placeholder="Email" required>
                     <label for="Email">Email</label>
-                    <div class="form-text text-dark">Se le contactará a su correo después del registro</div>
                 </div>
                 <div class="form-floating col">
                     <select class="form-select" id="floatingSelect" aria-label="Floating label select example"
@@ -59,7 +56,7 @@ $est = $rep[0]["fkestado"];
                         <option value="<?= $tipo ?>"><?= $tipo ?></option>
                     </select>
                     <label for="floatingSelect">Tipo de usuario</label>
-                    <div class="form-text text-dark">No se puede modificar el tipo de nivel X'D</div>
+                    <div class="form-text text-dark">No se puede modificar el tipo de nivel</div>
                 </div>
             </div>
             <input type="submit" class="enviar mx-auto d-block" value="Actualizar">

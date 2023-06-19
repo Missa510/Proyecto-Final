@@ -245,8 +245,9 @@ article {
     float: left;
     contain: content;
     border-radius: 6px;
-    height: 100%;
     margin-bottom: 0.7em;
+    height: 100%;
+    
 }
 
 .enviar {

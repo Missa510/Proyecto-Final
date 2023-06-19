@@ -15,8 +15,8 @@
         <div class="fs-6 text-danger">We'll never forget you, Dani & Jeisson &hearts;</div>
         <div class="contactos">
             <h6 class="display-6 text-center">Contáctanos</h6>
-            Está todo en el pié de página XD. Si necesíta enviar un correo directo con la empresa
-            <strong>S&J</strong> referente a un <i>reclamo, queja o sugerencia</i> con respecto
+            Si necesíta enviar un correo directo con la empresa
+            <strong>S&J</strong> referente a una <i>sugerencia, queja o reclamo</i> con respecto
             a su experiencia brindada por nosotros, por favor, llene el formulario de envio.
             <br><br>
             <div class="formasXD">

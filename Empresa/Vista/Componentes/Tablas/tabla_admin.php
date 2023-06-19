@@ -6,17 +6,15 @@
             <th scope="col">Usuario</th>
             <th scope="col">Contraseña</th>
             <th scope="col">Correo (mail)</th>
-            <th scope="col">Tipo</th>
         </thead>
         <?php
         while ($row = mysqli_fetch_assoc($mostrar_var)) {
         ?>
             <tbody>
                 <tr>
-                    <td> <?php echo $row["nom_admin"]; ?> </td>
-                    <td> <?php echo $row["pass_admin"]; ?> </td>
-                    <td> <a href="mailto:<?php echo $row["mail_admin"]; ?>" class="link-light"> <?php echo $row["mail_admin"]; ?> </a> </td>
-                    <td> <?php echo $row["tipo_admin"]; ?> </td>
+                    <td> <?= $row["nom_admin"]; ?> </td>
+                    <td> <?= $row["pass_admin"]; ?> </td>
+                    <td> <a href="mailto:<?=$row["mail_admin"]; ?>" class="link-light"> <?= $row["mail_admin"]; ?> </a> </td>
                 </tr>
             </tbody>
         <?php }

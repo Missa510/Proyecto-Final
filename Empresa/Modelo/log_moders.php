@@ -102,7 +102,7 @@ class Moderadores
         $conex_var = $base->conex();
 
         #Generar la consulta de datos
-        $sql = "INSERT INTO Moderadores (nom_mod, pass_mod, mail_mod, tipo_mod) VALUES ('{$this->getNom_mod()}', '{$this->getPass_mod()}', '{$this->getMail_mod()}', 'Moderador');";
+        $sql = "INSERT INTO Moderadores (nom_mod, pass_mod, mail_mod) VALUES ('{$this->getNom_mod()}', '{$this->getPass_mod()}', '{$this->getMail_mod()}');";
 
         #Procesar la consulta de datos
         $resuls_mods = mysqli_query($conex_var, $sql);
@@ -121,7 +121,7 @@ class Moderadores
         $conex_var = $base->conex();
 
         #Generar la consulta de datos
-        $sql = "SELECT * FROM Moderadores WHERE nom_mod = '{$this->getNom_mod()}' AND pass_mod = '{$this->getPass_mod()}' AND tipo_mod = 'Moderador';";
+        $sql = "SELECT * FROM Moderadores WHERE nom_mod = '{$this->getNom_mod()}' AND pass_mod = '{$this->getPass_mod()}' AND tipo_mod = 'Moderador' AND fkestado = 1;";
 
         #Procesar la consulta de datos
         $resuls_mods = mysqli_query($conex_var, $sql);
@@ -187,6 +187,25 @@ class Moderadores
 
         #Procesar la consulta de datos
         $resuls_mods = mysqli_query($conex_var, $sql);
+
+        #Retornar el valor de la consulta
+        return $resuls_mods;
+    }
+    public function VerificacionDeCorreo()
+    {
+        #Instanciar la conexión
+        $base = new BaseDeDatos();
+
+        #llamar a la base de datos
+        $conex_var = $base->conex();
+
+        #Generar la consulta de datos
+        $sql = "SELECT * FROM Moderadores WHERE mail_mod = '{$this->getMail_mod()}';";
+
+        #Procesar la consulta de datos
+        $resuls_mods = mysqli_query($conex_var, $sql);
+
+        # var_dump($sql, $resuls_usus);
 
         #Retornar el valor de la consulta
         return $resuls_mods;

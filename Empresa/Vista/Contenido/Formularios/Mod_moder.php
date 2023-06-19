@@ -14,8 +14,8 @@ $est = $rep[0]["fkestado"];
     <div class="main-puro">
         <h1 class="display-1 text-center mb-4" id="titulo">Modificar moderadores</h1>
         <p class="fs-5">
-            <strong>Nota del desarrollador:</strong> Cuando termines de actualizar el usuario, la sesión se te acabará y
-            debes volver a ingresar, pio perdo por eso -_- Para regresar a la página principal sin hacer ningún cambio
+            <strong>Nota de los desarrolladores:</strong> Cuando termines de actualizar el usuario, la sesión se te acabará y
+            debes volver a ingresar, pedimos perdón por eso. Para regresar a la página principal sin hacer ningún cambio
             al usuario, debes apretar la tecla <code>alt</code> seguido de la flecha izquiera <code>&leftarrow;</code>.
             A continuación, debes refrescar la página y listo 😊
         </p>
@@ -59,7 +59,7 @@ $est = $rep[0]["fkestado"];
                         <option value="<?= $tipo ?>"><?= $tipo ?></option>
                     </select>
                     <label for="floatingSelect">Tipo de usuario</label>
-                    <div class="form-text text-dark">No se puede modificar el tipo de nivel X'D</div>
+                    <div class="form-text text-dark">No se puede modificar el tipo de nivel</div>
                 </div>
             </div>
             <input type="submit" class="enviar mx-auto d-block" value="Actualizar">

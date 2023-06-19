@@ -102,17 +102,18 @@ class Usuarios
         $conex_var = $base->conex();
 
         #Generar la consulta de datos
-        $sql = "INSERT INTO Usuario_Corriente (nom_usu, pass_usu, mail_usu, tipo_usu) VALUES ('{$this->getNom_usu()}', '{$this->getPass_usu()}', '{$this->getMail_usu()}', 'Usuario Corriente');";
-        
+        $sql = "INSERT INTO Usuario_Corriente (nom_usu, pass_usu, mail_usu) VALUES ('{$this->getNom_usu()}', '{$this->getPass_usu()}', '{$this->getMail_usu()}');";
+
         #Procesar la consulta de datos
         $resuls_usus = mysqli_query($conex_var, $sql);
 
         #Retornar el valor de la consulta
-        #echo '<p class="fs-5">'.$sql.'</p>';
+        #echo '<p class="fs-5">' . $sql . ' y resultados: ' . $resuls_usus . '</p>';
         return $resuls_usus;
     }
-    public function LoginBuscar(){
-        
+    public function LoginBuscar()
+    {
+
         #Instanciar la conexión
         $base = new BaseDeDatos();
 
@@ -120,18 +121,19 @@ class Usuarios
         $conex_var = $base->conex();
 
         #Generar la consulta de datos
-        $sql = "SELECT * FROM Usuario_Corriente WHERE nom_usu = '{$this->getNom_usu()}' AND pass_usu = '{$this->getPass_usu()}' AND tipo_usu = 'Usuario Corriente';";
+        $sql = "SELECT * FROM Usuario_Corriente WHERE nom_usu = '{$this->getNom_usu()}' AND pass_usu = '{$this->getPass_usu()}' AND tipo_usu = 'Usuario Corriente' AND fkestado = 1;";
 
         #Procesar la consulta de datos
         $resuls_usus = mysqli_query($conex_var, $sql);
 
         #Retornar el valor de la consulta
-        #echo '<p class="fs-5">'.$sql.'</p>';
+        #echo '<p class="fs-5">'.$sql.' y resultados: '.$resuls_usus.'</p>';
         return $resuls_usus;
     }
 
-    public function Buscar(){
-        
+    public function Buscar()
+    {
+
         #Instanciar la conexión
         $base = new BaseDeDatos();
 
@@ -154,7 +156,8 @@ class Usuarios
         return $this->datos;
     }
 
-    public function Actualizar(){
+    public function Actualizar()
+    {
         #Instanciar la conexión
         $base = new BaseDeDatos();
 
@@ -166,6 +169,7 @@ class Usuarios
 
         #Procesar la consulta de datos
         $resuls_usus = mysqli_query($conex_var, $sql);
+
         #Retornar el valor de la consulta
         return $resuls_usus;
     }
@@ -181,9 +185,28 @@ class Usuarios
         $sql = "UPDATE Usuario_Corriente SET fkestado = {$this->getEst_usu()} WHERE id_usu = {$this->getId_usu()};";
 
         #Procesar la consulta de datos
-        $resuls_mods = mysqli_query($conex_var, $sql);
+        $resuls_usus = mysqli_query($conex_var, $sql);
 
         #Retornar el valor de la consulta
-        return $resuls_mods;
+        return $resuls_usus;
+    }
+    public function VerificacionDeCorreo()
+    {
+        #Instanciar la conexión
+        $base = new BaseDeDatos();
+
+        #llamar a la base de datos
+        $conex_var = $base->conex();
+
+        #Generar la consulta de datos
+        $sql = "SELECT * FROM Usuario_Corriente WHERE mail_usu = '{$this->getMail_usu()}';";
+
+        #Procesar la consulta de datos
+        $resuls_usus = mysqli_query($conex_var, $sql);
+
+        # var_dump($sql, $resuls_usus);
+
+        #Retornar el valor de la consulta
+        return $resuls_usus;
     }
 };

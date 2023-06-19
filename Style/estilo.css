@@ -1,18 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
 
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Nunito', sans-serif;
 }
 
 body {
-    background: #B79891;
+    background: #FF5F6D;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #94716B, #B79891);
+    background: -webkit-linear-gradient(to right, #FFC371, #FF5F6D);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #94716B, #B79891);
+    background: linear-gradient(to right, #FFC371, #FF5F6D);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+    background-repeat: no-repeat;
 }
 
 header {
@@ -46,50 +48,118 @@ header {
     font-style: italic;
 }
 
-
-.display-1{
+.display-1 {
     font-size: 56px;
     font-weight: bold;
-    background-color: rgba(252, 176, 141, 0.497);
+    background-color: rgba(163, 115, 56, 0.566);
     margin: 15px 50px;
     padding: 7px 7px;
     border-radius: 5px;
     text-align: center;
 }
 
-.card{
+.card {
     margin: auto;
     padding: 0%;
 }
 
-.row{
+.row {
     margin: 50px;
     padding: 50px;
 }
 
-.aside_info .card .txt_info{
+.aside_info .card .txt_info {
     padding: 15px;
 }
 
-.contacto{
+.contacto {
     margin: auto;
     text-align: center;
 }
 
-
-
-#carouselExampleCaptions{
+#carouselExampleCaptions {
     max-width: 75%;
     margin: auto;
     padding: 0%;
 }
 
-p{
+p {
     font-size: 24px;
 }
 
-
-.carrou img{
+.carrou img {
     width: 80%;
     height: 500px;
+}
+
+.tabla-de-empleados {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.empleados {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #fdfdfd96;
+    border-radius: 10px;
+    width: 100%;
+    margin-bottom: 2.5rem;
+    font-size: 18px;
+}
+
+.empleados .logo {
+    margin-right: 1rem;
+    contain: content;
+}
+.logo img{
+    height: 350px;
+    width: 350px;
+}
+
+.facturas {
+    background: rgba(255, 255, 255, 0.7);
+    padding: 1rem;
+    max-width: 100%;
+    margin-bottom: 1.3rem;
+    display: inline-flex;
+    border-radius: 5px;
+}
+
+.fact {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 5px;
+    margin: 0.2rem;
+    font-size: 22px;
+}
+
+.v {
+    background-color: #483a34;
+    padding: 1rem;
+    color: white;
+}
+
+.v a {
+    padding: 5px 7px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    transition: 0.5s all;
+    float: bottom;
+}
+
+.v a:hover,
+.v a:focus {
+    background-color: #2f2a29;
+    transform: scale(1.1);
+}
+
+.v h6 {
+    color: white;
+    text-transform: uppercase;
 }

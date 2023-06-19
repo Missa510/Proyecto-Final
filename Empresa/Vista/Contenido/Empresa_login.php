@@ -10,16 +10,16 @@ include("Vista/Componentes/PartesDePagina/nav.php");
                 Este es el login para los usuarios de la empresa S&J. Si eres uno de ellos, hola :3.
             </p>
             <p class="fs-5 text-justify">
-                Cabe resaltar que <strong>La empresa S&J no se hace responsable si usted proporciona
-                    sus datos de registro a entidades que no sean pertenecientes a la empresa. Si tiene
-                    alguna inquietud al momento de su sesión, por favor contactenos directamente a los
+                Cabe resaltar que <strong>La empresa S&J NO se hace responsable si usted proporciona
+                    sus datos de registro a entidades que no sean pertenecientes a la empresa</strong>. Si tiene
+                    alguna inquietud al momento de iniciar su sesión, por favor contactenos directamente a los
                     correos admitidos de la empresa cuyos dueños se encargarán de resolver y solventar
-                    sus inquietudes &heartsuit;</strong><br><br>
-                ¿Aún no tienes una cuenta? <a href="?control=navegacion&&funcion=registro" class="link-dark">Regístrate aquí</a>
+                    sus inquietudes &heartsuit;<br><br>
+                ¿Aún no tienes una cuenta? <a href="?control=navegacion&&funcion=registro" class="link-cardeta">Regístrate aquí</a>
                 <br><br>
                 Al utilizar nuestros servicios, nos confías tus datos. Entendemos que es una gran
-                responsabilidad y nos esforzamos al máximo para proteger tu información y permitirte
-                controlarla.<br><br>
+                responsabilidad y nos esforzamos al máximo para proteger tu información y mantenerla
+                lo más segura posible.<br><br>
             </p>
             <form action="?control=login&&funcion=logear" method="post">
                 <div class="row g-2 mb-3">

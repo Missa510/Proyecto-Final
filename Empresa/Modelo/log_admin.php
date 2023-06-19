@@ -103,7 +103,7 @@ class Administradores
         $conex_var = $base->conex();
 
         #Generar la consulta de datos
-        $sql = "INSERT INTO Administradores (nom_admin, pass_admin, mail_admin, tipo_admin) VALUES ('{$this->getNom_admin()}', '{$this->getPass_admin()}', '{$this->getMail_admin()}', 'Administrador');";
+        $sql = "INSERT INTO Administradores (nom_admin, pass_admin, mail_admin) VALUES ('{$this->getNom_admin()}', '{$this->getPass_admin()}', '{$this->getMail_admin()}');";
 
         #Procesar la consulta de datos
         $resuls_admins = mysqli_query($conex_var, $sql);
@@ -122,7 +122,7 @@ class Administradores
         $conex_var = $base->conex();
 
         #Generar la consulta de datos
-        $sql = "SELECT * FROM Administradores WHERE nom_admin = '{$this->getNom_admin()}' AND pass_admin = '{$this->getPass_admin()}' AND tipo_admin = 'Administrador';";
+        $sql = "SELECT * FROM Administradores WHERE nom_admin = '{$this->getNom_admin()}' AND pass_admin = '{$this->getPass_admin()}' AND tipo_admin = 'Administrador' AND fkestado = 1;";
 
         #Procesar la consulta de datos
         $resuls_admins = mysqli_query($conex_var, $sql);
@@ -191,5 +191,23 @@ class Administradores
         #Retornar el valor de la consulta
         return $resuls_admins;
     }
-}
-;
+    public function VerificacionDeCorreo()
+    {
+        #Instanciar la conexión
+        $base = new BaseDeDatos();
+
+        #llamar a la base de datos
+        $conex_var = $base->conex();
+
+        #Generar la consulta de datos
+        $sql = "SELECT * FROM Administradores WHERE mail_admin = '{$this->getMail_admin()}';";
+
+        #Procesar la consulta de datos
+        $resuls_admins = mysqli_query($conex_var, $sql);
+
+        # var_dump($sql, $resuls_usus);
+
+        #Retornar el valor de la consulta
+        return $resuls_admins;
+    }
+};
