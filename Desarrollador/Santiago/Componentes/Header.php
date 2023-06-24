@@ -24,9 +24,6 @@
             Biografia
           </a>
         </li>
-        <li class="nav-item">
-          <a href="?nave=habilidades" class="nav-link link-danger">habilidades y Competencias</a>
-        </li>
       </ul>
       <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Bucar algo (no disponible)" aria-label="Search" disabled>

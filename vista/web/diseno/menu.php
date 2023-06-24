@@ -15,7 +15,7 @@
                 </li>
             </ul>
             <div class="d-flex" role="search">
-                <a href="?control=administrador&&funcion=home" class="btn btn-outline-secondary">Administrador</a>
+                <a href="?control=administrador&&funcion=login" class="btn btn-outline-secondary">Administrador</a>
             </div>
         </div>
     </div>

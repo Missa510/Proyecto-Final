@@ -4,27 +4,35 @@
             <div class="row mt-2">
                 <div class="col mx-auto">
                     <h6>
-                        Nombre de la compañia desarrolladora
+                        Nombre de la compañia
                     </h6>
                     <p class="empresa">
                         <a href="?control=home&&funcion=principal">Gar - Ochoa</a>
+                    </p>
+                    <br><br>
+                    <h6>
+                        Nombre de la compañia Desarrolladora
+                    </h6>
+                    <p class="empresa">
+                        Empresa S&J
                     </p>
                 </div>
                 <div class="col mx-auto">
                     <h6>Contactos</h6>
                     <div class="contactos">
-                        <p><i class="fas fa-home me-3"></i> Cra 55 #5a-70 Bogotá-Colombia </p>
+                        <p> Cra 55 #5a-70 Bogotá-Colombia </p>
                     </div>
                     <p>
                         <a href="mailto:j.ohanaochoa@hotmail.com"> j.ohanaochoa@hotmail.com (Correo de la CEO) </a>
                         <a href="mailto:sticengarsan2112@gmail.com"> sticengarsan2112@gmail.com (Correo del CEO) </a>
+                        <br>
+                        <a href="tel:+573502165830"> +57 (350) 216 5830 </a>
                     </p>
-                    <p> <a href="tel:+573502165830"> +57 (350) 216 5830 </a> </p>
                 </div>
             </div>
         </div>
     </section>
     <a class="link-prin" href="./Empresa/" target="_blank">
-        © Website released by Empresa S&J
+        © Website released by Empresa S&J, 2023 All rights reserved
     </a>
 </footer>

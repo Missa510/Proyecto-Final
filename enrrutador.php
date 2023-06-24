@@ -21,7 +21,7 @@ function llamado($control, $funcion)
 
     $control = match ($control) {
         'home' => new Pagina(),
-        'administrador' => new Administrador(),
+        'administrador' => new AdministradorControl(),
         'ciudades' => new CityControl(),
         'sedes' => new SedesControl(),
         'existprod' => new ExistenciadeproductosControl(),

@@ -5,7 +5,7 @@ include("Vista/Componentes/PartesDePagina/nav.php");
 <main>
     <div class="main-puro">
         <div class="cardeta">
-            <h1 class="display-1 text-center" id="titulo">Sign Up</h1>
+            <h1 class="display-1 text-center" id="titulo">Create an account</h1>
             <p class="fs-4 text-center">
                 Este es el registro para crear nuevos usuarios que harán parte la empresa. Bienvenido &heartsuit;
             </p>

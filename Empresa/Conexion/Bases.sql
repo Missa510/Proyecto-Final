@@ -62,6 +62,10 @@ VALUES (
         "ssandovalrobles207@gmail.com",
         "Sergio.10",
         "Sergio0123"
+    ), (
+        "j.ohanaochoa@hotmail.com",
+        "Johana Ochoa",
+        "johana0123"
     );
 
 INSERT INTO

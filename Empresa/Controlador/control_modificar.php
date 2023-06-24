@@ -57,7 +57,7 @@ class Modify
 
             if($datosActFunc){
                 require_once("Vista\Componentes\actualizacion_finalizada.php");
-                require_once("Vista\Contenido\cuentas.php");
+                require_once("Vista\Contenido\Empresa_login.php");
             } else {
                 echo "<script>alert('Error, no se pudo actualizar el usuario ".$nom." :(')</script>";
             }
@@ -71,7 +71,7 @@ class Modify
 
             if($datosActFunc){
                 require_once("Vista\Componentes\actualizacion_finalizada.php");
-                require_once("Vista\Contenido\cuentas.php");
+                require_once("Vista\Contenido\Empresa_login.php");
             } else {
                 echo "<script>alert('Error, no se pudo actualizar el usuario ".$nom." :(')</script>";
             }
@@ -85,7 +85,7 @@ class Modify
 
             if($datosActFunc){
                 require_once("Vista\Componentes\actualizacion_finalizada.php");
-                require_once("Vista\Contenido\cuentas.php");
+                require_once("Vista\Contenido\Empresa_login.php");
             } else {
                 echo "<script>alert('Error, no se pudo actualizar el usuario ".$nom." :(')</script>";
             }

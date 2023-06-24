@@ -18,7 +18,6 @@
     <div class="main-puro">
         <h1 class="display-1 text-center" id="titulo">Error de login</h1>
         <p class="fs-5">
-            No se pudo hallar el usuario <strong><?= $name; ?></strong>, de tipo de nivel <strong><?= $tipo; ?></strong> <br>
             Estos tipos de errores son muy comúnes cuando el usuario digitó un dato erroneo durante su proceso de Log In.
             Para evitar esto se debe confirmar el empleo correcto de los datos digitados anteriormente
         </p>

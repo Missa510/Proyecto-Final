@@ -5,7 +5,7 @@ include("Vista/Componentes/PartesDePagina/nav.php");
 <main>
     <div class="main-puro">
         <div class="cardeta">
-            <h1 class="display-1 text-center" id="titulo">Log in</h1>
+            <h1 class="display-1 text-center" id="titulo">Access</h1>
             <p class="fs-4 text-center">
                 Este es el login para los usuarios de la empresa S&J. Si eres uno de ellos, hola :3.
             </p>

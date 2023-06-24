@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
 
 * {
     margin: 0;
@@ -26,6 +26,12 @@ header {
     justify-content: center;
     color: white;
     background-color: rgba(0, 0, 0, 0.82);
+}
+
+svg {
+    align-self: center;
+    width: 20px;
+    height: 20px;
 }
 
 .Logo {
@@ -92,6 +98,85 @@ p {
     height: 500px;
 }
 
+.formulario {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.formulario form {
+    max-width: 450px;
+    margin-bottom: 1rem;
+    background-color: black;
+    border-radius: 15px;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    text-align: left;
+}
+
+.formulario form .name label,
+.formulario form .password label {
+    font-size: 20px;
+    position: relative;
+    left: 0;
+    top: -40px;
+    pointer-events: none;
+    transition: 0.5s ease-out;
+}
+
+.formulario form .name input,
+.formulario form .password input {
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 10px;
+    background: none;
+    color: white;
+    border-bottom: 2px white solid;
+}
+
+.formulario form .name input:focus~label,
+.formulario form .name input:valid~label,
+.formulario form .password input:focus~label,
+.formulario form .password input:valid~label {
+    top: -60px;
+    transform: scale(0.6);
+}
+
+.formulario form .name,
+.formulario form .password,
+.formulario form .check {
+    margin-bottom: 1rem;
+}
+
+.formulario form .login{
+    border: 1px white solid;
+    border-radius: 10px;
+    outline: none;
+    background: none;
+    color: white;
+    padding: 7px 14px;
+    font-size: 22px;
+    transition: transform 0.5s ease-out;
+}
+
+.formulario form .login::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    transform-origin: right;
+    transform: scaleX(0);
+}
+
+.formulario form .login:hover::after{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
 .tabla-de-empleados {
     display: flex;
     flex-direction: column;
@@ -116,7 +201,8 @@ p {
     margin-right: 1rem;
     contain: content;
 }
-.logo img{
+
+.logo img {
     height: 350px;
     width: 350px;
 }
@@ -142,6 +228,12 @@ p {
     background-color: #483a34;
     padding: 1rem;
     color: white;
+    -webkit-user-select: none;
+    /* Safari */
+    -ms-user-select: none;
+    /* IE 10 and IE 11 */
+    user-select: none;
+    /* Standard syntax */
 }
 
 .v a {

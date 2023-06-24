@@ -13,8 +13,6 @@
             Mientras los administradores de la página ponen en funcionamiento esta página, usarán este ejemplo de bloc
             (únicamente estaba en ingles).
         </p>
-        <h1 class="display-4">Sample blog post</h1> 
-        <p class="text-light">January 1, 2021 by...</p> 
         <p class="fs-5">
             This blog post shows a few different types of content that's supported and styled with Bootstrap. 
             Basic typography, lists, tables, images, code, and more are all supported as expected.

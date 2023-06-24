@@ -29,31 +29,31 @@ class Register
 
             # Si la función regresa algo tons mal ahí, ya existe un correo
             if ($verificador != "N;") {
-                echo "<script> alert('Error: El correo ".$email." ya posee un usuario existente. Intenta con otro correo electrónico 😢') </script>";
+                echo "<script> alert('Error: El correo " . $email . " ya posee un usuario existente. Intenta con otro correo electrónico 😢') </script>";
                 require_once("Vista\Contenido\Empresa_login_registro.php");
             } else {
                 try {
-    
+
                     #Instanciar la lágica de Usuarios
                     $datos = new Usuarios(NULL, $nom, $pass, $email, $tipo);
-    
+
                     #Llamar la función con los datos nuevos
                     $insert = $datos->Insertar();
-    
+
                     #Actualizar los datos registradas
                     require_once("Vista/Componentes/complete_register.php");
-                    require_once("Vista/Contenido/cuentas.php");
-    
+                    require_once("Vista\Contenido\Empresa_login.php");
+
                     #Envio de mensaje de confirmación
-    
-                    mail($email, "Verificación Completada S&J", "Se realizó el proceso de registro de la empresa S&J. Que tenga un buen día ♥");
+
+                    # mail($email, "Verificación Completada S&J", "Se realizó el proceso de registro de la empresa S&J. Que tenga un buen día ♥");
                 } catch (Exception $e) {
                     session_abort();
                     echo "Error: " . $e;
                 }
             }
         } else {
-            echo "<script> alert('Error: Algunos de los datos no cumple con los requerimientos necesarios. Por favor, intenta de nuevo 😢') </script>";
+            require_once("Vista/Componentes/Errores/error_register.php");
             require_once("Vista\Contenido\Empresa_login_registro.php");
         }
     }
@@ -67,28 +67,44 @@ class Register
         $email = $_POST["email"];
 
         if (preg_match($parametersText, $nom) and preg_match($parametersEmail, $email) and preg_match($parametersText, $pass)) {
-            try {
-                #Llamar a la lógica de los usuarios
-                require_once("Modelo/log_admin.php");
+            #Llamar a la lógica de los usuarios
+            require_once("Modelo/log_admin.php");
 
-                #Instanciar la lágica de Usuarios
-                $datos = new Administradores(NULL, $nom, $pass, $email, NULL);
+            #Verificación de correo electrónico
+            $ver = new Administradores(null, null, null, $email, null);
 
-                #Llamar la función con los datos nuevos
-                $insert = $datos->Insertar();
+            #Llamar la función con los datos nuevos
+            $ver_func = $ver->VerificacionDeCorreo();
 
-                #Actualizar los datos registradas
-                require_once("Vista/Componentes/complete_register.php");
-                require_once("Vista/Contenido/cuentas.php");
+            #Convertir el objecto de SQL a string
+            $verificador =  serialize(mysqli_fetch_object($ver_func));
 
-                #Envio de mensaje de confirmación
-                // mail($email, "Verificación Completada S&J", "Se realizó el proceso de registro de la empresa S&J. Que tenga un buen día :3");
-            } catch (Exception $e) {
-                session_abort();
-                echo "Error: " . $e;
+            if ($verificador != "N;") {
+                echo "<script> alert('Error: El correo " . $email . " ya posee un usuario existente. Intenta con otro correo electrónico 😢') </script>";
+                require_once("Vista\Contenido\Formularios\Regis_admin.php");
+            } else {
+                try {
+
+                    #Instanciar la lágica de Usuarios
+                    $datos = new Administradores(NULL, $nom, $pass, $email, NULL);
+
+                    #Llamar la función con los datos nuevos
+                    $insert = $datos->Insertar();
+
+                    #Actualizar los datos registradas
+                    require_once("Vista/Componentes/complete_register.php");
+                    require_once("Vista\Contenido\Empresa_login.php");
+
+                    #Envio de mensaje de confirmación
+
+                    # mail($email, "Verificación Completada S&J", "Se realizó el proceso de registro de la empresa S&J. Que tenga un buen día ♥");
+                } catch (Exception $e) {
+                    session_abort();
+                    echo "Error: " . $e;
+                }
             }
         } else {
-            echo "<script> alert('Error: Algunos de los datos no cumple con los requerimientos necesarios. Por favor, intenta de nuevo 😢') </script>";
+            require_once("Vista/Componentes/Errores/error_register.php");
             require_once("Vista\Contenido\Formularios\Regis_admin.php");
         }
     }
@@ -103,28 +119,37 @@ class Register
         $email = $_POST["email"];
 
         if (preg_match($parametersText, $nom) and preg_match($parametersEmail, $email) and preg_match($parametersText, $pass)) {
-            try {
-                #Llamar a la lógica de los usuarios
-                require_once("Modelo/log_moder.php");
+            #Llamar a la lógica de los usuarios
+            require_once("Modelo/log_moders.php");
 
+            #Verificación de correo electrónico
+            $ver = new Moderadores(null, null, null, $email, null);
+
+            #Llamar la función con los datos nuevos
+            $ver_func = $ver->VerificacionDeCorreo();
+
+            #Convertir el objecto de SQL a string
+            $verificador =  serialize(mysqli_fetch_object($ver_func));
+
+            if ($verificador != "N;") {
+                echo "<script> alert('Error: El correo " . $email . " ya posee un usuario existente. Intenta con otro correo electrónico 😢') </script>";
+                require_once("Vista\Contenido\Formularios\Regis_moder.php");
+            } else {
                 #Instanciar la lágica de Usuarios
                 $datos = new Moderadores(NULL, $nom, $pass, $email, NULL);
-
+    
                 #Llamar la función con los datos nuevos
                 $insert = $datos->Insertar();
-
+    
                 #Actualizar los datos registradas
                 require_once("Vista/Componentes/complete_register.php");
-                require_once("Vista/Contenido/cuentas.php");
-
+                require_once("Vista\Contenido\Empresa_login.php");
+    
                 #Envio de mensaje de confirmación
                 // mail($email, "Verificación Completada S&J", "Se realizó el proceso de registro de la empresa S&J. Que tenga un buen día :3");
-            } catch (Exception $e) {
-                session_abort();
-                echo "Error: " . $e;
             }
         } else {
-            echo "<script> alert('Error: Algunos de los datos no cumple con los requerimientos necesarios. Por favor, intenta de nuevo 😢') </script>";
+            require_once("Vista/Componentes/Errores/error_register.php");
             require_once("Vista\Contenido\Formularios\Regis_moder.php");
         }
     }
@@ -153,25 +178,25 @@ class Register
             $ver_func = $ver->VerificacionDeCorreo();
 
             #Convertir el objecto de SQL a string
-            $verificador =  serialize( mysqli_fetch_object($ver_func) );
-            
+            $verificador =  serialize(mysqli_fetch_object($ver_func));
+
             # Si la función regresa algo tons mal ahí, ya existe un correo
             if ($verificador != "N;") {
-                echo "<script> alert('Error: El correo ".$email." ya posee un usuario existente. Intenta con otro correo electrónico 😢') </script>";
+                echo "<script> alert('Error: El correo " . $email . " ya posee un usuario existente. Intenta con otro correo electrónico 😢') </script>";
                 require_once("Vista\Contenido\Empresa_login_registro.php");
             } else {
                 try {
-    
+
                     #Instanciar la lágica de Usuarios
                     $datos = new Usuarios(NULL, $nom, $pass, $email, $tipo);
-    
+
                     #Llamar la función con los datos nuevos
                     $insert = $datos->Insertar();
-    
+
                     #Actualizar los datos registradas
                     require_once("Vista/Componentes/complete_register.php");
-                    require_once("Vista/Contenido/cuentas.php");
-    
+                    require_once("Vista\Contenido\Empresa_login.php");
+
                     #Envio de mensaje de confirmación
                     # mail($email, "Verificación Completada S&J", "Se realizó el proceso de registro de la empresa S&J. Que tenga un buen día ♥");
                 } catch (Exception $e) {
@@ -180,7 +205,7 @@ class Register
                 }
             }
         } else {
-            echo "<script> alert('Error: Algunos de los datos no cumple con los requerimientos necesarios. Por favor, intenta de nuevo 😢') </script>";
+            require_once("Vista/Componentes/Errores/error_register.php");
             require_once("Vista\Contenido\Formularios\Regis_user.php");
         }
     }

@@ -1,6 +1,5 @@
 <?php
 
-session_start();
 
 class Login
 {
@@ -24,6 +23,7 @@ class Login
             $rows = mysqli_num_rows($clase_login); // Pasar por cada fila
 
             if ($rows) {
+                session_start();
                 include("Vista/Contenido/AdminSNJ.php");
             } else {
                 include("Vista/Componentes/Errores/error_login.php");
@@ -39,6 +39,7 @@ class Login
             $rows = mysqli_num_rows($clase_login); // Pasar por cada fila
 
             if ($rows) {
+                session_start();
                 include("Vista/Contenido/ModerSNJ.php");
             } else {
                 include("Vista/Componentes/Errores/error_login.php");
@@ -54,6 +55,7 @@ class Login
             $rows = mysqli_num_rows($clase_login); // Pasar por cada fila
 
             if ($rows) {
+                session_start();
                 include("Vista/Contenido/UsuNomSNJ.php");
             } else {
                 include("Vista/Componentes/Errores/error_login.php");

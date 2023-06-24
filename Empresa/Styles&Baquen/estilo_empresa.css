@@ -331,6 +331,21 @@ article {
     padding: 0.25em;
 }
 
+.btn-rusure-aceptar, .btn-rusure-cancelar{
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 24px;
+    transition: 0.5s all ease-out;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.btn-rusure-aceptar{ background-color: #282828; color: #fff; }
+.btn-rusure-cancelar{ background-color: rgb(226, 226, 226); }
+
+.btn-rusure-aceptar:hover{ background-color: #171717;}
+.btn-rusure-cancelar:hover{ background-color:rgb(195, 195, 195);}
+
 .profile {
     background-color: rgba(0, 35, 35, 0.418);
     padding: 0.7em;
