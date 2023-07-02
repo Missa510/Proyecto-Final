@@ -158,23 +158,12 @@ p {
     color: white;
     padding: 7px 14px;
     font-size: 22px;
-    transition: transform 0.5s ease-out;
+    transition: 0.5s ease-out;
 }
 
-.formulario form .login::after{
-    content: "";
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: white;
-    transform-origin: right;
-    transform: scaleX(0);
-}
-
-.formulario form .login:hover::after{
-    transform-origin: left;
-    transform: scaleX(1);
+.formulario form .login:hover, .formulario form .login:focus{
+    background: white;
+    color: black;
 }
 
 .tabla-de-empleados {

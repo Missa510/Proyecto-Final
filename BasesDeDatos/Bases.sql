@@ -7,10 +7,17 @@ USE FerreGarochoa;
 -- DROP DATABASE FerreGarochoa;
 
 CREATE TABLE
+    Estado(
+        id_est INT AUTO_INCREMENT PRIMARY KEY,
+        nom_est TEXT NOT NULL
+    );
+
+CREATE TABLE
     Ciudades(
         id_ciu INT AUTO_INCREMENT PRIMARY KEY,
         nom_ciu TEXT NOT NULL,
-        capital_ciudad TEXT NOT NULL
+        capital_ciudad TEXT NOT NULL,
+        fkest INT NOT NULL
     );
 
 CREATE TABLE
@@ -18,19 +25,22 @@ CREATE TABLE
         id_sede INT AUTO_INCREMENT PRIMARY KEY,
         nom_sed TEXT NOT NULL,
         direc_sed TEXT NOT NULL,
-        fkciudad INT NOT NULL
+        fkciudad INT NOT NULL,
+        fkest INT NOT NULL
     );
 
 CREATE TABLE
     EPS(
         id_eps INT AUTO_INCREMENT PRIMARY KEY,
-        eps TEXT NOT NULL
+        eps TEXT NOT NULL,
+        fkest INT NOT NULL
     );
 
 CREATE TABLE
     Cajadecompensacion(
         id_caja INT AUTO_INCREMENT PRIMARY KEY,
-        caja TEXT NOT NULL
+        caja TEXT NOT NULL,
+        fkest INT NOT NULL
     );
 
 CREATE TABLE
@@ -38,7 +48,8 @@ CREATE TABLE
         id_turnos INT AUTO_INCREMENT PRIMARY KEY,
         nom_turno TEXT NOT NULL,
         entrada TIME NOT NULL,
-        salida TIME NOT NULL
+        salida TIME NOT NULL,
+        fkest INT NOT NULL
     );
 
 CREATE TABLE
@@ -46,7 +57,8 @@ CREATE TABLE
         id_cargo INT AUTO_INCREMENT PRIMARY KEY,
         cargo TEXT NOT NULL,
         sueldo DOUBLE NOT NULL,
-        descrip_cargo TEXT DEFAULT "[No hay aun]"
+        descrip_cargo TEXT DEFAULT "[No hay aun]",
+        fkest INT NOT NULL
     );
 
 CREATE TABLE
@@ -70,7 +82,8 @@ CREATE TABLE
         fkcargo INT NOT NULL,
         fksede INT NOT NULL,
         fkturno INT NOT NULL,
-        descrip_emp TEXT DEFAULT "[No hay aun]"
+        descrip_emp TEXT DEFAULT "[No hay aun]",
+        fkest INT NOT NULL
     );
 
 CREATE TABLE
@@ -79,7 +92,8 @@ CREATE TABLE
         fecha_exist_entrada DATETIME NOT NULL,
         cant_produc INT NOT NULL,
         fksede INT NOT NULL,
-        fkproduct INT NOT NULL
+        fkproduct INT NOT NULL,
+        fkest INT NOT NULL
     );
 
 CREATE TABLE
@@ -87,7 +101,8 @@ CREATE TABLE
         id_produc INT AUTO_INCREMENT PRIMARY KEY,
         nom_produc TEXT NOT NULL,
         precio_venta DOUBLE NOT NULL,
-        precio_compra DOUBLE NOT NULL
+        precio_compra DOUBLE NOT NULL,
+        fkest INT NOT NULL
     );
 
 CREATE TABLE
@@ -97,7 +112,8 @@ CREATE TABLE
         cant_produc INT NOT NULL,
         fkproduc INT NOT NULL,
         fkprov INT NOT NULL,
-        fksede INT NOT NULL
+        fksede INT NOT NULL,
+        fkest INT NOT NULL
     );
 
 CREATE TABLE
@@ -108,7 +124,8 @@ CREATE TABLE
         descuento INT DEFAULT 0,
         fkproduc INT NOT NULL,
         fkclient INT NOT NULL,
-        fksede INT NOT NULL
+        fksede INT NOT NULL,
+        fkest INT NOT NULL
     );
 
 CREATE TABLE
@@ -117,7 +134,8 @@ CREATE TABLE
         nom_prov TEXT NOT NULL,
         tel_prov INT NOT NULL,
         mail_prov TEXT NOT NULL,
-        direc_prov TEXT NOT NULL
+        direc_prov TEXT NOT NULL,
+        fkest INT NOT NULL
     );
 
 CREATE TABLE
@@ -128,8 +146,56 @@ CREATE TABLE
         ape_clien TEXT NOT NULL,
         tel_clien BIGINT NOT NULL,
         mail_clien TEXT NOT NULL,
-        direc_clien TEXT NOT NULL
+        direc_clien TEXT NOT NULL,
+        fkest INT NOT NULL
     );
+
+ALTER TABLE Ciudades
+ADD
+    CONSTRAINT EstadoDeLaCiudad FOREIGN KEY (fkest) REFERENCES Estado(id_est);
+
+ALTER TABLE Sedes
+ADD
+    CONSTRAINT EstadoDeLaSede FOREIGN KEY (fkest) REFERENCES Estado(id_est);
+
+ALTER TABLE EPS
+ADD
+    CONSTRAINT EstadoDeLaEPS FOREIGN KEY (fkest) REFERENCES Estado(id_est);
+
+ALTER TABLE Cajadecompensacion
+ADD
+    CONSTRAINT EstadoDeLaCaja FOREIGN KEY (fkest) REFERENCES Estado(id_est);
+
+ALTER TABLE Turnos
+ADD
+    CONSTRAINT EstadoDelTurno FOREIGN KEY (fkest) REFERENCES Estado(id_est);
+
+ALTER TABLE Cargos
+ADD
+    CONSTRAINT EstadoDelCargo FOREIGN KEY (fkest) REFERENCES Estado(id_est);
+
+ALTER TABLE Empleados
+ADD
+    CONSTRAINT EstadoDelEmpleado FOREIGN KEY (fkest) REFERENCES Estado(id_est);
+
+ALTER TABLE
+    Existenciasdeproductos
+ADD
+    CONSTRAINT EstadoDeLaExistencia FOREIGN KEY (fkest) REFERENCES Estado(id_est);
+
+ALTER TABLE Facturasdeclientes
+ADD
+    CONSTRAINT EstadoDeLaFacturaClientes FOREIGN KEY (fkest) REFERENCES Estado(id_est);
+
+ALTER TABLE Proveedores
+ADD
+    CONSTRAINT EstadoDelProveedor FOREIGN KEY (fkest) REFERENCES Estado(id_est);
+
+ALTER TABLE Clientes
+ADD
+    CONSTRAINT EstadoDelCliente FOREIGN KEY (fkest) REFERENCES Estado(id_est);
+
+-- Relaciones entres las demás tablas
 
 ALTER TABLE Sedes
 ADD
@@ -196,8 +262,11 @@ ALTER TABLE Empleados
 ADD
     CONSTRAINT SedEmp FOREIGN KEY (fksede) REFERENCES Sedes(id_sede);
 
+INSERT INTO Estado(nom_est)
+VALUES ("Habilitado"), ("Inhabilitado"), ("En existencia"), ("Agotado"), ("Activo"), ("Despedido"), ("Incapacidad"), ("Vacaciones"), ("Pagada"), ("Por pagar");
+
 INSERT INTO
-    Ciudades(nom_ciu, capital_ciudad)
+    Ciudades(nom_ciu, capital_ciudad, fkest)
 VALUES ("Bogota D.C.", "Cundinamarca"), ("Medellin", "Antioquia"), ("Cali", "Valle del Cauca"), ("Michelena", "Tachira");
 
 INSERT INTO
@@ -346,7 +415,8 @@ VALUES ("2023-06-08 13-16", 5, 1, 2, 4), ("2023-06-08 13-20", 1, 3, 3, 1), ("202
 INSERT INTO EPS(eps)
 VALUES ("Nueva EPS"), ("Capital Salud"), ("Colsubsidio"), ("Famisanar"), ("Sanitas");
 
-INSERT INTO Cajadecompensacion (caja)
+INSERT INTO
+    Cajadecompensacion (caja)
 VALUES ("Cafam"), ("Compensar"), ("Grupo AVAL");
 
 INSERT INTO
@@ -416,7 +486,7 @@ VALUES (
         4,
         1,
         "Un hijo de puta total >:("
-    ),(
+    ), (
         1450640694,
         "Alvarez",
         "Diana Maria",
@@ -430,7 +500,7 @@ VALUES (
         4,
         2,
         "Un sol de Dios :3"
-    ),(
+    ), (
         1031541248,
         "Rada Vasquez",
         "Mateo",

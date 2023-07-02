@@ -49,4 +49,21 @@ class Cargos
         #echo '<p class="fs-5">'.$sql.'</p>';   
         return $resuls_cargos;
     }
+    public function Agregar(){
+        #Instanciar la conexión
+        $base = new BaseDeDatosGarochoa();
+
+        #llamar a la base de datos
+        $conex_var = $base->conex();
+
+        #Generar la consulta de datos
+        $sql = "INSERT INTO Cargos(cargo, sueldo, descrip_cargo) VALUES ('{$this->getCargo()}', {$this->getSueldo()}, '{$this->getDescripcion()}');";
+
+        #Procesar la consulta de datos
+        $resuls_cargos = mysqli_query($conex_var, $sql);
+
+        #Retornar el valor de la consulta
+        #echo '<p class="fs-5">'.$sql.'</p>';   
+        return $resuls_cargos;
+    }
 }

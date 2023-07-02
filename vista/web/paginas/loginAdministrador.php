@@ -15,7 +15,7 @@
             <label for="password">Contraseña</label>
         </div>
         <div class="check text-center">
-            <input type="checkbox" id="check" required>
+            <input type="checkbox" class="form-check-input" id="check" required>
             <label for="check"> Acepto los términos y condiciones </label>
         </div>
         <div class="send text-center">
